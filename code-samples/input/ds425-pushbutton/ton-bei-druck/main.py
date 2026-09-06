@@ -1,4 +1,4 @@
-# Aufgabe 1 - Pushbutton an Pin P0
+# Sample: ton-bei-druck  (DS425 Pushbutton)
 # Board:   BBC micro:bit V2.2
 # Sprache: MicroPython
 #

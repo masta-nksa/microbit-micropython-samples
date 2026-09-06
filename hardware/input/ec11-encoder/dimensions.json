@@ -1,0 +1,21 @@
+{
+  "part": "EC11 Rotary Encoder (mit Push)",
+  "slug": "ec11-encoder",
+  "kind": "rotary-encoder",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - typische Werte fuer EC11-Standardbauform, noch nicht gemessen",
+  "body": { "width": 12.0, "depth": 12.0, "height": 6.5 },
+  "shaft": { "shape": "round-D", "diameter": 6.0, "length": 15.0, "flat_length": 10.0 },
+  "thread": { "diameter": 7.0, "length": 5.0, "type": "M7 x 0.75", "nut_flats": 10.0 },
+  "detents": 20,
+  "pulses_per_rev": 20,
+  "push": true,
+  "mount": { "type": "panel-thread", "detail": "M7-Gewindebund + Nut, plus Zentrierstift" },
+  "pins": { "detail": "3 Pins Encoder (A, C, B) auf einer Seite, 2 Pins Taster auf der anderen" },
+  "cad": {
+    "panel_cutout": { "shape": "circle", "diameter": 7.2, "tolerance": 0.2 },
+    "anti_rotation_pin": { "diameter": 2.0, "offset_from_center": 7.0 },
+    "note": "Rundausschnitt fuer den Gewindebund + kleines Loch fuer den Verdrehschutz-Stift. Werte pruefen."
+  }
+}

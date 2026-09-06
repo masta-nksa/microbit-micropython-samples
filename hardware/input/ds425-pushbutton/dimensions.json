@@ -1,0 +1,16 @@
+{
+  "part": "DS425 Momentary Pushbutton",
+  "slug": "ds425-pushbutton",
+  "kind": "pushbutton",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - typische Werte fuer 6x6-mm-Taktschalter, noch nicht gemessen",
+  "body": { "width": 6.0, "depth": 6.0, "height": 3.5 },
+  "actuator": { "shape": "round", "diameter": 3.5, "protrusion": 1.5 },
+  "mount": { "type": "pcb", "detail": "THT, 4 Beine, 2x2" },
+  "pins": { "pattern": "2x2", "pitch_x": 6.5, "pitch_y": 4.5, "dia": 0.5 },
+  "cad": {
+    "panel_cutout": { "shape": "circle", "diameter": 4.0, "tolerance": 0.2 },
+    "note": "Ausschnitt nur fuer den Stoessel. Gehaeuse sitzt hinter dem Panel. Werte pruefen, bevor gefertigt wird."
+  }
+}

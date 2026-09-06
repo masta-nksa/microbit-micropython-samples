@@ -1,8 +1,9 @@
-# Aufgabe 2 - Ton solange der Taster gedrueckt wird
+# ton-solange-gedrueckt
 
-Erweiterung von [Aufgabe 1](../01-pushbutton/). Statt eines kurzen Tons beim
-Druecken erklingt der Ton **durchgehend, solange der Taster gehalten wird**.
-Loslassen -> Ton sofort aus.
+Bauteil: [DS425 Pushbutton](../README.md) · Kategorie: input
+
+Der Ton erklingt **durchgehend, solange der Taster gehalten wird**.
+Loslassen -> Ton sofort aus. Aufbauend auf [ton-bei-druck](../ton-bei-druck/).
 
 ## Material
 
@@ -13,9 +14,11 @@ Loslassen -> Ton sofort aus.
 | 1 | Steckbrett |
 | 2 | Jumperkabel bzw. Krokoklemmen |
 
+Masse fuers CAD: [../../../../hardware/input/ds425-pushbutton/](../../../../hardware/input/ds425-pushbutton/)
+
 ## Verkabelung
 
-Identisch zu Aufgabe 1:
+Identisch zu [ton-bei-druck](../ton-bei-druck/README.md#verkabelung):
 
 ```
    micro:bit                         DS425 (Momentary)
@@ -25,14 +28,13 @@ Identisch zu Aufgabe 1:
   +---------+                       +---------------+
 ```
 
-Diagonal gegenueberliegende Beine verwenden. Kein externer Widerstand -
-der Pull-up wird im Code mit `pin0.set_pull(pin0.PULL_UP)` aktiviert.
+Diagonal gegenueberliegende Beine. Kein externer Widerstand - Pull-up per Code.
 
 ## Foto der Verkabelung
 
-Foto nach dem Test in [`verkabelung/`](verkabelung/) ablegen und hier einbinden:
+Foto nach dem Test in [`wiring/`](wiring/) ablegen und hier einbinden:
 
-<!-- ![Verkabelung Aufgabe 2](verkabelung/foto.jpg) -->
+<!-- ![Verkabelung](wiring/foto.jpg) -->
 
 ## Code
 
@@ -50,7 +52,7 @@ Siehe [`main.py`](main.py). Kernidee:
 ## Auf den micro:bit uebertragen
 
 <https://python.microbit.org/v/beta> -> Code einfuegen -> **Connect** -> **Send to micro:bit**.
-Details: [../../docs/setup.md](../../docs/setup.md).
+Details: [../../../../docs/setup.md](../../../../docs/setup.md).
 
 ## Erwartetes Verhalten
 
@@ -59,6 +61,6 @@ Details: [../../docs/setup.md](../../docs/setup.md).
 
 ## Moegliche Erweiterungen
 
-- Tonhoehe von einem zweiten Eingang (Poti an `P1`) abhaengig machen
+- Tonhoehe von einem Poti an `P1` abhaengig machen
 - Mehrere Taster = mehrere Toene (kleine Orgel)
 - Beim Halten die Tonhoehe langsam ansteigen lassen

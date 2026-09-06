@@ -1,4 +1,4 @@
-# Aufgabe 2 - Pushbutton: Ton solange gedrueckt wird
+# Sample: ton-solange-gedrueckt  (DS425 Pushbutton)
 # Board:   BBC micro:bit V2.2
 # Sprache: MicroPython
 #
@@ -6,7 +6,7 @@
 #       Loslassen -> Ton aus.
 #
 # --------------------------------------------------------------------------
-# Verkabelung (identisch zu Aufgabe 1)
+# Verkabelung (identisch zu Sample "ton-bei-druck")
 # --------------------------------------------------------------------------
 #   Taster-Bein 1  ->  Pin  P0
 #   Taster-Bein 2  ->  Pin  GND
