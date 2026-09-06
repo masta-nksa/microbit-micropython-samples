@@ -17,7 +17,10 @@
 #   Taster-Seite (2 Pins):  hier noch nicht angeschlossen
 #
 #   Interne Pull-ups fuer P0 und P1 werden per Code aktiviert.
-#   Hinweis: Dreht der Zaehler falsch herum -> P0 und P1 tauschen
+#   Hinweis: Pin A (CLK) und Pin B (DT) sind gleichwertig und je nach
+#            Encoder anders beschriftet - die Schaltung geht so oder so.
+#            Vertauscht man sie, dreht sich nur die Zaehlrichtung um.
+#            Dreht der Zaehler falsch herum -> P0 und P1 tauschen
 #            (oder unten die +1 / -1 vertauschen).
 # --------------------------------------------------------------------------
 

@@ -26,8 +26,13 @@ nicht benutzt.
   +---------+        +----------+
 ```
 
-Interne Pull-ups fuer `P0` und `P1` per Code. Dreht der Zaehler falsch
-herum: `P0` und `P1` tauschen.
+Interne Pull-ups fuer `P0` und `P1` per Code.
+
+**CLK und DT (Pin A und Pin B) sind vertauschbar.** Die beiden Drehsignale
+sind gleichwertig und je nach Encoder anders beschriftet - die Schaltung
+funktioniert so oder so. Vertauscht man sie, dreht sich nur die
+**Zaehlrichtung** um. Dreht der Zaehler also falsch herum: `P0` und `P1`
+tauschen (oder im Code `+= 1` / `-= 1` vertauschen). Getestet: funktioniert.
 
 ## Foto der Verkabelung
 

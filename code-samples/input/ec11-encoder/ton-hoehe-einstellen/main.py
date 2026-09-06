@@ -13,6 +13,8 @@
 #   SW 1        -> P2        SW 2        -> GND
 #
 #   Interne Pull-ups fuer P0, P1, P2 per Code.
+#   Pin A (CLK) und Pin B (DT) sind gleichwertig - vertauschen dreht nur die
+#   Richtung um (dann wird die Tonhoehe andersherum eingestellt).
 #   Ton laeuft ueber den eingebauten Lautsprecher (pin=None), P0 bleibt frei.
 # --------------------------------------------------------------------------
 

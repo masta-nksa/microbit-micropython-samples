@@ -30,6 +30,11 @@ Ton aus.
 
 Interne Pull-ups fuer `P0`, `P1`, `P2` per Code. Knopf gedrueckt -> `P2 = 0`.
 
+**CLK und DT (Pin A und Pin B) sind vertauschbar** - die beiden Drehsignale
+sind gleichwertig und je nach Encoder anders beschriftet. Vertauscht man sie,
+dreht sich nur die Zaehlrichtung um. Falsch herum: `P0` und `P1` tauschen.
+Die Taster-Pins sind davon nicht betroffen.
+
 ## Foto der Verkabelung
 
 Nach dem Test ein Foto in [`wiring/`](wiring/) ablegen und hier einbinden:

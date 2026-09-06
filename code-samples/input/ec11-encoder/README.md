@@ -20,10 +20,27 @@ pro Umdrehung.
 
 - Interne Pull-ups fuer `P0`, `P1`, `P2` werden im Code aktiviert
   (`pinX.set_pull(pinX.PULL_UP)`). Kein externer Widerstand noetig.
-- **Dreht der Zaehler falsch herum:** `P0` und `P1` tauschen.
 - Ton (in Sample 3) laeuft ueber den eingebauten Lautsprecher (`pin=None`),
   darum bleibt `P0` fuer den Encoder frei.
 - Masse fuers CAD (spaeter): [../../../hardware/input/ec11-encoder/](../../../hardware/input/ec11-encoder/)
+
+### CLK und DT sind vertauschbar
+
+Die beiden Drehsignale des Encoders sind **gleichwertig** - welches "A/CLK"
+und welches "B/DT" heisst, ist je nach Encoder oder Breakout-Board
+unterschiedlich beschriftet. Zum Anschluss ist das egal: die Verkabelung
+funktioniert in **beiden Faellen**.
+
+Der einzige Unterschied: Vertauscht man die beiden, **dreht sich die
+Zaehlrichtung um** (Rechtsdrehen zaehlt dann runter). Der Code merkt die
+Richtung daran, *welches der beiden Signale zuerst kippt* - beim Tauschen
+kippt einfach das andere zuerst.
+
+**Dreht der Zaehler falsch herum** -> eine der beiden Loesungen:
+- am micro:bit `P0` und `P1` tauschen, **oder**
+- im Code die `+= 1` und `-= 1` vertauschen.
+
+Der Encoder-GND (Mittelpin) und die Taster-Pins sind davon nicht betroffen.
 
 ## So liest der Code den Drehgeber
 

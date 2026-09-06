@@ -26,6 +26,10 @@ Identisch zu [drehen-und-druck](../drehen-und-druck/README.md#verkabelung):
 
 Ton laeuft ueber den eingebauten Lautsprecher (`pin=None`), `P0` bleibt frei.
 
+**CLK und DT (Pin A/B) sind vertauschbar** - Details siehe
+[Bauteil-README](../README.md#clk-und-dt-sind-vertauschbar). Falsch herum:
+`P0` und `P1` tauschen.
+
 ## Foto der Verkabelung
 
 Nach dem Test ein Foto in [`wiring/`](wiring/) ablegen und hier einbinden:

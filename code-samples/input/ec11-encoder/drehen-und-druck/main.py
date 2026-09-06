@@ -20,7 +20,9 @@
 #   Interne Pull-ups fuer P0, P1 und P2 werden per Code aktiviert.
 #     - Knopf losgelassen:  P2 = 1
 #     - Knopf gedrueckt:     P2 = 0
-#   Hinweis: Dreht der Zaehler falsch herum -> P0 und P1 tauschen.
+#   Hinweis: Pin A (CLK) und Pin B (DT) sind gleichwertig / je nach Encoder
+#            anders beschriftet. Vertauschen dreht nur die Zaehlrichtung um.
+#            Dreht der Zaehler falsch herum -> P0 und P1 tauschen.
 # --------------------------------------------------------------------------
 
 from microbit import *
