@@ -22,7 +22,8 @@ Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 
 | Nr. | Thema | Bauteil | Ordner |
 |----:|-------|---------|--------|
-| 1 | Einfacher Pushbutton am Pin | DS425 Momentary | [aufgaben/01-pushbutton](aufgaben/01-pushbutton) |
+| 1 | Einfacher Pushbutton am Pin (Herz + kurzer Ton) | DS425 Momentary | [aufgaben/01-pushbutton](aufgaben/01-pushbutton) |
+| 2 | Pushbutton: Ton solange gedrueckt wird | DS425 Momentary | [aufgaben/02-pushbutton-dauerton](aufgaben/02-pushbutton-dauerton) |
 
 *Weitere Aufgaben folgen.*
 
@@ -34,10 +35,14 @@ micro_bit/
 ├── docs/
 │   └── setup.md                 Editor + Uebertragung auf den micro:bit
 └── aufgaben/
-    └── 01-pushbutton/
-        ├── README.md            Aufgabe, Material, Verkabelung
-        ├── main.py              Sample-Code
-        └── verkabelung/         Foto der realen Schaltung
+    ├── 01-pushbutton/
+    │   ├── README.md            Aufgabe, Material, Verkabelung
+    │   ├── main.py              Sample-Code
+    │   └── verkabelung/         Foto der realen Schaltung
+    └── 02-pushbutton-dauerton/
+        ├── README.md
+        ├── main.py
+        └── verkabelung/
 ```
 
 ## Hinweise
