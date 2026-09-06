@@ -4,12 +4,12 @@ Sammlung einfacher, kommentierter Beispielprogramme fuer den **BBC micro:bit V2.
 programmiert in **MicroPython**. Entstanden fuer die Impulswoche an der
 Neuen Kantonsschule Aarau.
 
-Jedes Sample verbindet ein externes Bauteil ueber die Pins mit dem micro:bit
-und enthaelt:
+Jedes Sample ist eine in sich abgeschlossene Seite (`README.md`) mit:
 
-- den Sample-Code (`main.py`) mit ausfuehrlichen Kommentaren
-- eine Beschreibung der Verkabelung (Text + ASCII-Skizze)
-- einen Ordner `wiring/` fuer das reale Foto der Schaltung (nach dem Test)
+- Aufgabe, Materialliste und Verkabelung (Text + ASCII-Skizze)
+- dem vollstaendigen Programm - direkt in der README, automatisch aus `main.py`
+  eingefuegt (siehe [`tools/`](tools/))
+- einem Ordner `wiring/` fuer das reale Foto der Schaltung (nach dem Test)
 
 Dazu die **Masse der Bauteile fuers CAD** unter [`hardware/`](hardware/)
 (Panel-Ausschnitte fuer Taster, Displays usw.).
@@ -28,6 +28,8 @@ micro_bit/
 ├── README.md
 ├── docs/
 │   └── setup.md                     Editor + Uebertragung auf den micro:bit
+├── tools/
+│   └── build_readme.py              fuegt main.py in die Sample-READMEs ein
 │
 ├── code-samples/                    kategorie / bauteil / sample
 │   ├── input/
@@ -59,6 +61,15 @@ micro_bit/
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [ton-hoehe-einstellen](code-samples/input/ec11-encoder/ton-hoehe-einstellen/) | Drehen = Tonhoehe, Druck = an/aus |
 
 *Weitere Kategorien, Bauteile und Samples folgen.*
+
+## Neues Sample hinzufuegen
+
+1. Ordner `code-samples/<kategorie>/<bauteil>/<sample>/` anlegen mit `main.py`
+   und `README.md` (in der README die zwei Marker `<!-- CODE:START -->` /
+   `<!-- CODE:END -->` an die Stelle setzen, wo der Code stehen soll).
+2. `python tools/build_readme.py` ausfuehren - fuegt `main.py` dort ein.
+3. Nach jeder Aenderung an `main.py` das Skript erneut laufen lassen.
+   `python tools/build_readme.py --check` meldet veraltete READMEs.
 
 ## Hinweise
 
