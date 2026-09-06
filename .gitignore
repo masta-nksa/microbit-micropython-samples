@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# micro:bit build output
+*.hex
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editoren
+.vscode/
+.idea/
