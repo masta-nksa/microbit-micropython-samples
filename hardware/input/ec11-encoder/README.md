@@ -3,8 +3,8 @@
 > **Status: nicht verifiziert.** Platzhalterwerte fuer die EC11-Standardbauform.
 > Vor der Fertigung selbst messen und `dimensions.json` -> `"verified": true`.
 
-Code-Samples folgen unter
-`../../../code-samples/input/ec11-encoder/` (noch nicht angelegt).
+Code-Samples zu diesem Bauteil:
+[../../../code-samples/input/ec11-encoder/](../../../code-samples/input/ec11-encoder/)
 
 ## Masstabelle (mm)
 

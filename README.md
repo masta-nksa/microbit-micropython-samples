@@ -31,9 +31,13 @@ micro_bit/
 │
 ├── code-samples/                    kategorie / bauteil / sample
 │   ├── input/
-│   │   └── ds425-pushbutton/
-│   │       ├── ton-bei-druck/       main.py · README.md · wiring/
-│   │       └── ton-solange-gedrueckt/
+│   │   ├── ds425-pushbutton/
+│   │   │   ├── ton-bei-druck/       main.py · README.md · wiring/
+│   │   │   └── ton-solange-gedrueckt/
+│   │   └── ec11-encoder/
+│   │       ├── drehen-zaehler/
+│   │       ├── drehen-und-druck/
+│   │       └── ton-hoehe-einstellen/
 │   └── output/                      geplant (Display, Segmentanzeige, LED-Strip)
 │
 └── hardware/                        Masse fuers CAD, gleicher Pfad wie code-samples
@@ -50,6 +54,9 @@ micro_bit/
 |---------|--------|--------------|
 | [ds425-pushbutton](code-samples/input/ds425-pushbutton/) | [ton-bei-druck](code-samples/input/ds425-pushbutton/ton-bei-druck/) | Herz + kurzer Ton beim Druecken |
 | [ds425-pushbutton](code-samples/input/ds425-pushbutton/) | [ton-solange-gedrueckt](code-samples/input/ds425-pushbutton/ton-solange-gedrueckt/) | Dauerton, solange gehalten wird |
+| [ec11-encoder](code-samples/input/ec11-encoder/) | [drehen-zaehler](code-samples/input/ec11-encoder/drehen-zaehler/) | Wert 0..9 per Drehknopf |
+| [ec11-encoder](code-samples/input/ec11-encoder/) | [drehen-und-druck](code-samples/input/ec11-encoder/drehen-und-druck/) | zusaetzlich: Druck = Reset auf 0 |
+| [ec11-encoder](code-samples/input/ec11-encoder/) | [ton-hoehe-einstellen](code-samples/input/ec11-encoder/ton-hoehe-einstellen/) | Drehen = Tonhoehe, Druck = an/aus |
 
 *Weitere Kategorien, Bauteile und Samples folgen.*
 
