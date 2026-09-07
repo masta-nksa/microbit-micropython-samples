@@ -12,10 +12,15 @@ USB-Kabel. Externe Bauteile kommen danach unter [`../input/`](../input/) und
 | | extern (`input/`, `output/`) | eingebaut (`onboard/`) |
 |---|---|---|
 | `main.py` + `README.md` | ja | ja |
+| Code im README-Abschnitt `## Programm` | ja (auto aus `main.py`) | ja (auto aus `main.py`) |
 | Ordner `wiring/` | ja | nein (nichts zu verkabeln) |
 | Masse unter `hardware/` | ja | nein (kein Panel-Ausschnitt) |
 | Materialliste | micro:bit + Bauteile | nur `1x micro:bit V2.2` |
 | README-Abschnitt Verkabelung | ASCII-Skizze | ersetzt durch *Hardware: eingebaut* |
+| README-Abschnitt *Foto der Verkabelung* | ja | nein |
+
+Der genaue Abschnittsaufbau steht in
+[../README.md](../README.md#aufbau-einer-sample-readme).
 
 ## Bauteile
 

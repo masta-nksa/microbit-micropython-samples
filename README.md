@@ -111,10 +111,22 @@ micro_bit/
 ## Neues Sample hinzufuegen
 
 1. Ordner `code-samples/<kategorie>/<bauteil>/<sample>/` anlegen mit `main.py`
-   und `README.md` (in der README die zwei Marker `<!-- CODE:START -->` /
-   `<!-- CODE:END -->` an die Stelle setzen, wo der Code stehen soll).
-2. `python tools/build_readme.py` ausfuehren - fuegt `main.py` dort ein.
-3. Nach jeder Aenderung an `main.py` das Skript erneut laufen lassen.
+   und `README.md`. Bei externen Bauteilen zusaetzlich `wiring/`.
+2. Die `README.md` nach dem festen Abschnitts-Schema aufbauen (Details:
+   [code-samples/README.md](code-samples/README.md#aufbau-einer-sample-readme)).
+   Kurz: Beschreibung -> Material -> Verkabelung -> Foto -> Wie der Code
+   funktioniert -> **`## Programm` mit dem Code direkt darunter** -> Uebertragen
+   -> Erwartetes Verhalten -> Erweiterungen.
+3. Im Abschnitt `## Programm` nur die zwei Marker setzen, den Code NICHT von
+   Hand einfuegen:
+
+   ```
+   <!-- CODE:START -->
+   <!-- CODE:END -->
+   ```
+
+4. `python tools/build_readme.py` ausfuehren - fuegt `main.py` zwischen die
+   Marker ein. Nach jeder Aenderung an `main.py` erneut laufen lassen;
    `python tools/build_readme.py --check` meldet veraltete READMEs.
 
 ## Hinweise
