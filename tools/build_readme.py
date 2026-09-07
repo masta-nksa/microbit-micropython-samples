@@ -37,7 +37,7 @@ def process(readme: Path, check: bool) -> str:
 
     main_py = readme.parent / "main.py"
     if not main_py.exists():
-        print(f"  ! {readme.relative_to(ROOT)}: Marker vorhanden, aber keine main.py")
+        # z. B. eine Doku-Seite, die die Marker nur als Beispiel zeigt - ignorieren
         return "skip"
 
     code = main_py.read_text(encoding="utf-8")

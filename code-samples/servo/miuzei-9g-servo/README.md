@@ -95,11 +95,16 @@ Regeln:
 - Beim Einschalten in die **Mitte des Fensters** fahren, nicht auf 1500 µs -
   das koennte schon am Anschlag liegen.
 - Sanft fahren: in kleinen µs-Stufen mit kurzer Pause, nicht springen.
-- Optional nach dem Fahren `pin0.write_analog(0)` -> Servo stromlos, kein
-  Brummen. Nur, wenn die Mechanik die Lage von selbst haelt.
+- **Zustand merken** und einen zweiten Aufruf in dieselbe Richtung sperren -
+  ein `bolzen_rein()`, wenn der Bolzen schon drin ist, wuerde sonst gegen den
+  Anschlag druecken.
+- Haelt die Mechanik die Lage durch **Reibung** selbst (z. B. ein Bolzen im
+  Fuehrungsloch), nach dem Fahren `pin0.write_analog(0)` -> Servo stromlos,
+  kein Brummen, kein Dauerstrom.
 
 Ablauf: erst [endlagen-kalibrieren](endlagen-kalibrieren/), dann die zwei Werte
-in [bolzen-schalten](bolzen-schalten/) eintragen.
+in [bolzen-schalten](bolzen-schalten/) eintragen. `bolzen-schalten` bringt die
+fertigen Funktionen `bolzen_rein()` / `bolzen_raus()` mit.
 
 ## Samples (Lernreihenfolge)
 
