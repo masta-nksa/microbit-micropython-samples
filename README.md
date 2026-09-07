@@ -32,6 +32,18 @@ micro_bit/
 │   └── build_readme.py              fuegt main.py in die Sample-READMEs ein
 │
 ├── code-samples/                    kategorie / bauteil / sample
+│   ├── onboard/                     eingebaut, KEINE Verkabelung, kein hardware/
+│   │   ├── buttons/                 a-b-zaehler
+│   │   ├── touch-logo/              logo-schalter                 (V2)
+│   │   ├── pin-touch/               beruehr-toene
+│   │   ├── accelerometer/           wasserwaage · shake-wuerfel
+│   │   ├── compass/                 kompass-pfeil
+│   │   ├── microphone/              lautstaerke-balken            (V2)
+│   │   ├── temperature/             temperatur-anzeigen
+│   │   ├── light-level/             nachtlicht
+│   │   ├── display/                 bilder-und-text · einzelne-pixel
+│   │   ├── speaker/                 melodie-und-sound             (V2)
+│   │   └── radio/                   senden-empfangen         (2 micro:bits)
 │   ├── input/
 │   │   ├── ds425-pushbutton/
 │   │   │   ├── ton-bei-druck/       main.py · README.md · wiring/
@@ -43,12 +55,31 @@ micro_bit/
 │   └── output/                      geplant (Display, Segmentanzeige, LED-Strip)
 │
 └── hardware/                        Masse fuers CAD, gleicher Pfad wie code-samples
+                                     (nur fuer externe Bauteile, nicht fuer onboard/)
     └── input/
         ├── ds425-pushbutton/        README.md · dimensions.json · bilder/
         └── ec11-encoder/
 ```
 
 ## Samples
+
+### onboard (eingebaut, kein Aufbau)
+
+| Bauteil | Sample | Beschreibung |
+|---------|--------|--------------|
+| [buttons](code-samples/onboard/buttons/) | [a-b-zaehler](code-samples/onboard/buttons/a-b-zaehler/) | A zaehlt hoch, B runter, A+B = Reset |
+| [touch-logo](code-samples/onboard/touch-logo/) | [logo-schalter](code-samples/onboard/touch-logo/logo-schalter/) | Logo antippen schaltet ein Herz an/aus (V2) |
+| [pin-touch](code-samples/onboard/pin-touch/) | [beruehr-toene](code-samples/onboard/pin-touch/beruehr-toene/) | P0/P1/P2 antippen spielt je einen Ton |
+| [accelerometer](code-samples/onboard/accelerometer/) | [wasserwaage](code-samples/onboard/accelerometer/wasserwaage/) | Leuchtpunkt zeigt die Neigung |
+| [accelerometer](code-samples/onboard/accelerometer/) | [shake-wuerfel](code-samples/onboard/accelerometer/shake-wuerfel/) | Schuetteln = Zufallszahl 1..6 |
+| [compass](code-samples/onboard/compass/) | [kompass-pfeil](code-samples/onboard/compass/kompass-pfeil/) | Pfeil zeigt immer nach Norden |
+| [microphone](code-samples/onboard/microphone/) | [lautstaerke-balken](code-samples/onboard/microphone/lautstaerke-balken/) | Lautstaerke als Balken (V2) |
+| [temperature](code-samples/onboard/temperature/) | [temperatur-anzeigen](code-samples/onboard/temperature/temperatur-anzeigen/) | Knopf A -> Temperatur scrollt durch |
+| [light-level](code-samples/onboard/light-level/) | [nachtlicht](code-samples/onboard/light-level/nachtlicht/) | wird es dunkel, leuchtet die Matrix |
+| [display](code-samples/onboard/display/) | [bilder-und-text](code-samples/onboard/display/bilder-und-text/) | Bilderfolge und Lauftext |
+| [display](code-samples/onboard/display/) | [einzelne-pixel](code-samples/onboard/display/einzelne-pixel/) | Leuchtpunkt mit den Knoepfen bewegen |
+| [speaker](code-samples/onboard/speaker/) | [melodie-und-sound](code-samples/onboard/speaker/melodie-und-sound/) | Melodie, Soundeffekt, Ton per Logo (V2) |
+| [radio](code-samples/onboard/radio/) | [senden-empfangen](code-samples/onboard/radio/senden-empfangen/) | zwei micro:bits funken sich Zahlen zu |
 
 ### input
 
