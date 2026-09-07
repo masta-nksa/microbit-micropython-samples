@@ -74,11 +74,40 @@ Schienen, Servo-Signal an `P0`.
 > micro:bit weiterhin per USB am Rechner haengen - das ist kein Problem,
 > solange `+` der Box nirgends mit dem micro:bit verbunden ist.
 
+## Servo an einer Mechanik mit Endanschlag
+
+Treibt der Servo etwas an, das **nicht** volle 180 Grad Weg hat (Bolzen,
+Klappe, Schieber), darf er nur in einem begrenzten Fenster fahren. Faehrt er
+gegen den Anschlag, geht er in den **Stall**: hohe Stromaufnahme, Brummen,
+heisse Zahnraeder, Brownout/Reset am micro:bit.
+
+Regeln:
+
+- **Zwei kalibrierte Endpunkte** (`PULS_A`, `PULS_B` in Mikrosekunden), der
+  Servo faehrt nur dazwischen. `set_puls()` klemmt jeden Wert hart auf dieses
+  Fenster.
+- Jeweils **~30 µs Sicherheitsmarge** vom echten Anschlag weg (Servo-Toleranz,
+  Getriebespiel, Temperaturdrift).
+- Endpunkte **messen, nicht rechnen**: mit
+  [endlagen-kalibrieren](endlagen-kalibrieren/) in feinen Schritten anfahren
+  und den µs-Wert ablesen. Rechnerisch nur zur Kontrolle: ca. **11 µs pro
+  Grad** Servowinkel, mal Getriebe-Uebersetzung `Z_servo / Z_rad`.
+- Beim Einschalten in die **Mitte des Fensters** fahren, nicht auf 1500 µs -
+  das koennte schon am Anschlag liegen.
+- Sanft fahren: in kleinen µs-Stufen mit kurzer Pause, nicht springen.
+- Optional nach dem Fahren `pin0.write_analog(0)` -> Servo stromlos, kein
+  Brummen. Nur, wenn die Mechanik die Lage von selbst haelt.
+
+Ablauf: erst [endlagen-kalibrieren](endlagen-kalibrieren/), dann die zwei Werte
+in [bolzen-schalten](bolzen-schalten/) eintragen.
+
 ## Samples (Lernreihenfolge)
 
 1. [a-b-drehen/](a-b-drehen/) - Knopf A/B drehen den Servo, A+B zurueck auf 0
 2. [zwei-stellungen/](zwei-stellungen/) - Knopf A = 0 Grad, Knopf B = 180 Grad
 3. [sweep/](sweep/) - faehrt langsam hin und her, Knopf A haelt an
 4. [winkel-mit-encoder/](winkel-mit-encoder/) - Drehknopf (EC11) stellt den Winkel
+5. [endlagen-kalibrieren/](endlagen-kalibrieren/) - sichere Endpunkte einer eigenen Mechanik finden
+6. [bolzen-schalten/](bolzen-schalten/) - zwischen zwei kalibrierten Endpunkten fahren (Endanschlag)
 
 Masse fuers CAD (spaeter): [../../../hardware/servo/miuzei-9g-servo/](../../../hardware/servo/miuzei-9g-servo/)

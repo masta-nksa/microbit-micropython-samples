@@ -57,7 +57,9 @@ micro_bit/
 │   │       ├── a-b-drehen/
 │   │       ├── zwei-stellungen/
 │   │       ├── sweep/
-│   │       └── winkel-mit-encoder/
+│   │       ├── winkel-mit-encoder/
+│   │       ├── endlagen-kalibrieren/
+│   │       └── bolzen-schalten/
 │   └── output/                      geplant (Display, Segmentanzeige, LED-Strip)
 │
 └── hardware/                        Masse fuers CAD, gleicher Pfad wie code-samples
@@ -107,6 +109,8 @@ micro_bit/
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [zwei-stellungen](code-samples/servo/miuzei-9g-servo/zwei-stellungen/) | Knopf A = 0 Grad, Knopf B = 180 Grad |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [sweep](code-samples/servo/miuzei-9g-servo/sweep/) | faehrt langsam hin und her, Knopf A haelt an |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [winkel-mit-encoder](code-samples/servo/miuzei-9g-servo/winkel-mit-encoder/) | EC11-Drehknopf stellt den Winkel |
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [endlagen-kalibrieren](code-samples/servo/miuzei-9g-servo/endlagen-kalibrieren/) | sichere Endpunkte einer eigenen Mechanik finden |
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [bolzen-schalten](code-samples/servo/miuzei-9g-servo/bolzen-schalten/) | zwischen zwei kalibrierten Endpunkten fahren (Endanschlag) |
 
 *Weitere Kategorien, Bauteile und Samples folgen.*
 
