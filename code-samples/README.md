@@ -15,6 +15,7 @@ Die Masse jedes Bauteils fuers CAD liegen unter demselben Pfad in
 |-----------|--------|--------|
 | [onboard/](onboard/) | eingebaut: Knoepfe, Matrix, Lautsprecher, Mikrofon, Sensoren | in Arbeit |
 | [input/](input/) | externe Eingabe: Taster, Rotary-Encoder, Poti, Joystick | in Arbeit |
+| [servo/](servo/) | Servomotoren | in Arbeit |
 | [output/](output/) | externe Ausgabe: LCD-Display, Segmentanzeige, LED-Strips | geplant |
 
 Bei `onboard/` gibt es **keine Verkabelung** und keinen `hardware/`-Ordner -

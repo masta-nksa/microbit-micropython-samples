@@ -1,0 +1,17 @@
+{
+  "part": "Miuzei Micro Servo 9g (Metallgetriebe)",
+  "slug": "miuzei-9g-servo",
+  "kind": "servo",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - typische Werte fuer 9g-Micro-Servo (SG90-Bauform), noch nicht gemessen",
+  "body": { "width": 22.8, "depth": 12.0, "height": 22.5 },
+  "mount_flange": { "width": 32.0, "hole_spacing_length": 28.0, "hole_dia": 2.0, "thickness": 2.5 },
+  "shaft": { "position_from_front": 6.0, "spline": "SG90-kompatibel", "teeth": 20 },
+  "cable": { "wires": 3, "length": 200, "colors": ["orange/gelb Signal", "rot +", "braun/schwarz -"] },
+  "electrical": { "voltage": "4.8-6 V", "signal": "PWM 50 Hz, 0.5-2.4 ms" },
+  "cad": {
+    "panel_cutout": { "shape": "rect", "width": 23.0, "depth": 12.2, "tolerance": 0.2 },
+    "note": "Rechteckausschnitt fuer den Koerper; Servo haengt an der Montagelasche oben auf. Werte pruefen, bevor gefertigt wird."
+  }
+}

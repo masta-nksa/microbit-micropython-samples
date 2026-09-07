@@ -52,13 +52,20 @@ micro_bit/
 │   │       ├── drehen-zaehler/
 │   │       ├── drehen-und-druck/
 │   │       └── ton-hoehe-einstellen/
+│   ├── servo/
+│   │   └── miuzei-9g-servo/
+│   │       ├── zwei-stellungen/
+│   │       ├── sweep/
+│   │       └── winkel-mit-encoder/
 │   └── output/                      geplant (Display, Segmentanzeige, LED-Strip)
 │
 └── hardware/                        Masse fuers CAD, gleicher Pfad wie code-samples
                                      (nur fuer externe Bauteile, nicht fuer onboard/)
-    └── input/
-        ├── ds425-pushbutton/        README.md · dimensions.json · bilder/
-        └── ec11-encoder/
+    ├── input/
+    │   ├── ds425-pushbutton/        README.md · dimensions.json · bilder/
+    │   └── ec11-encoder/
+    └── servo/
+        └── miuzei-9g-servo/
 ```
 
 ## Samples
@@ -90,6 +97,14 @@ micro_bit/
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [drehen-zaehler](code-samples/input/ec11-encoder/drehen-zaehler/) | Wert 0..9 per Drehknopf |
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [drehen-und-druck](code-samples/input/ec11-encoder/drehen-und-druck/) | zusaetzlich: Druck = Reset auf 0 |
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [ton-hoehe-einstellen](code-samples/input/ec11-encoder/ton-hoehe-einstellen/) | Drehen = Tonhoehe, Druck = an/aus |
+
+### servo
+
+| Bauteil | Sample | Beschreibung |
+|---------|--------|--------------|
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [zwei-stellungen](code-samples/servo/miuzei-9g-servo/zwei-stellungen/) | Knopf A = 0 Grad, Knopf B = 180 Grad |
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [sweep](code-samples/servo/miuzei-9g-servo/sweep/) | faehrt langsam hin und her, Knopf A haelt an |
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [winkel-mit-encoder](code-samples/servo/miuzei-9g-servo/winkel-mit-encoder/) | EC11-Drehknopf stellt den Winkel |
 
 *Weitere Kategorien, Bauteile und Samples folgen.*
 

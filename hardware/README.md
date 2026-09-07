@@ -54,3 +54,4 @@ Nicht zutreffende Felder weglassen. Ein CAD-Skript liest immer
 |---------|-----------|----------|
 | [ds425-pushbutton](input/ds425-pushbutton/) | input | nein |
 | [ec11-encoder](input/ec11-encoder/) | input | nein |
+| [miuzei-9g-servo](servo/miuzei-9g-servo/) | servo | nein |
