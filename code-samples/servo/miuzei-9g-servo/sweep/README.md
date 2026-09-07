@@ -22,9 +22,13 @@ Identisch zu [zwei-stellungen](../zwei-stellungen/README.md#verkabelung):
 
 ```
    P0  -> Signal (orange/gelb)
-   3V  -> +      (rot)          bei Zittern/Reset: externes 4.5-V-Fach, GND gemeinsam
+   3V  -> +      (rot)
    GND -> -      (braun/schwarz)
 ```
+
+Mit externer Batteriebox (3x 1.5 V) statt `3V`: `+` der Box an Servo rot,
+`-` der Box an Servo braun **und** an micro:bit `GND`, Signal an `P0`, `3V`
+frei lassen. Details: [Bauteil-README](../README.md#stromversorgung---wichtig).
 
 ## Foto der Verkabelung
 

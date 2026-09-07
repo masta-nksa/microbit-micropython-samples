@@ -29,9 +29,10 @@ Masse fuers CAD: [../../../../hardware/servo/miuzei-9g-servo/](../../../../hardw
 ```
 
 **Stromversorgung:** Ein einzelner unbelasteter Servo laeuft meist direkt am
-`3V`-Pin. Zittert er oder startet der micro:bit neu -> externes Batteriefach
-(3x AA = 4.5 V) an rot/braun und **GND von Batterie und micro:bit verbinden**.
-Signal bleibt an `P0`. Details: [Bauteil-README](../README.md#stromversorgung---wichtig).
+`3V`-Pin. Zittert er oder startet der micro:bit neu -> externe Batteriebox
+(3x 1.5 V = 4.5 V): `+` an Servo rot, `-` an Servo braun **und** an micro:bit
+`GND` (gemeinsame Masse), Signal an `P0`, `3V` bleibt frei. Verdrahtung im
+Detail: [Bauteil-README, "Anschluss mit externer Batteriebox"](../README.md#stromversorgung---wichtig).
 
 ## Foto der Verkabelung
 

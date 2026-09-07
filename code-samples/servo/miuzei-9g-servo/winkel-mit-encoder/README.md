@@ -37,8 +37,10 @@ Masse fuers CAD: [../../../../hardware/servo/miuzei-9g-servo/](../../../../hardw
   wird hier nicht benutzt.
 - Dreht der Winkel falsch herum -> `P1` und `P2` tauschen.
 - **Stromversorgung:** wie bei den anderen Servo-Samples. Bewegt sich der
-  Servo unter Last oder startet der micro:bit neu -> externes 4.5-V-Fach an
-  rot/braun, GND gemeinsam.
+  Servo unter Last oder startet der micro:bit neu -> externe Batteriebox
+  (3x 1.5 V = 4.5 V): `+` an Servo rot, `-` an Servo braun **und** an
+  micro:bit `GND`. Der Encoder-COM bleibt am selben `GND`. `3V` frei lassen.
+  Details: [Bauteil-README](../README.md#stromversorgung---wichtig).
 
 ## Foto der Verkabelung
 
