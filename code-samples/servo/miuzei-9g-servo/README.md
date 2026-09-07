@@ -76,8 +76,9 @@ Schienen, Servo-Signal an `P0`.
 
 ## Samples (Lernreihenfolge)
 
-1. [zwei-stellungen/](zwei-stellungen/) - Knopf A = 0 Grad, Knopf B = 180 Grad
-2. [sweep/](sweep/) - faehrt langsam hin und her, Knopf A haelt an
-3. [winkel-mit-encoder/](winkel-mit-encoder/) - Drehknopf (EC11) stellt den Winkel
+1. [a-b-drehen/](a-b-drehen/) - Knopf A/B drehen den Servo, A+B zurueck auf 0
+2. [zwei-stellungen/](zwei-stellungen/) - Knopf A = 0 Grad, Knopf B = 180 Grad
+3. [sweep/](sweep/) - faehrt langsam hin und her, Knopf A haelt an
+4. [winkel-mit-encoder/](winkel-mit-encoder/) - Drehknopf (EC11) stellt den Winkel
 
 Masse fuers CAD (spaeter): [../../../hardware/servo/miuzei-9g-servo/](../../../hardware/servo/miuzei-9g-servo/)

@@ -54,6 +54,7 @@ micro_bit/
 │   │       └── ton-hoehe-einstellen/
 │   ├── servo/
 │   │   └── miuzei-9g-servo/
+│   │       ├── a-b-drehen/
 │   │       ├── zwei-stellungen/
 │   │       ├── sweep/
 │   │       └── winkel-mit-encoder/
@@ -102,6 +103,7 @@ micro_bit/
 
 | Bauteil | Sample | Beschreibung |
 |---------|--------|--------------|
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [a-b-drehen](code-samples/servo/miuzei-9g-servo/a-b-drehen/) | Knopf A/B drehen den Servo, A+B zurueck auf 0 |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [zwei-stellungen](code-samples/servo/miuzei-9g-servo/zwei-stellungen/) | Knopf A = 0 Grad, Knopf B = 180 Grad |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [sweep](code-samples/servo/miuzei-9g-servo/sweep/) | faehrt langsam hin und her, Knopf A haelt an |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [winkel-mit-encoder](code-samples/servo/miuzei-9g-servo/winkel-mit-encoder/) | EC11-Drehknopf stellt den Winkel |

@@ -6,7 +6,7 @@ Servomotoren - per PWM-Signal auf einen Winkel gestellt.
 
 | Bauteil | Typ | Samples | Hardware |
 |---------|-----|---------|----------|
-| [miuzei-9g-servo/](miuzei-9g-servo/) | Micro-Servo 9g, Metallgetriebe, ~0..180 Grad | zwei-stellungen, sweep, winkel-mit-encoder | [hardware](../../hardware/servo/miuzei-9g-servo/) |
+| [miuzei-9g-servo/](miuzei-9g-servo/) | Micro-Servo 9g, Metallgetriebe, ~0..180 Grad | a-b-drehen, zwei-stellungen, sweep, winkel-mit-encoder | [hardware](../../hardware/servo/miuzei-9g-servo/) |
 
 ## Grundlagen
 
