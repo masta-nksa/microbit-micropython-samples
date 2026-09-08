@@ -60,15 +60,21 @@ micro_bit/
 │   │       ├── winkel-mit-encoder/
 │   │       ├── endlagen-kalibrieren/
 │   │       └── bolzen-schalten/
-│   └── output/                      geplant (Display, Segmentanzeige, LED-Strip)
+│   └── output/
+│       └── ws2812b-led-strip/
+│           ├── erste-farben/
+│           ├── lauflicht/
+│           └── regenbogen/
 │
 └── hardware/                        Masse fuers CAD, gleicher Pfad wie code-samples
                                      (nur fuer externe Bauteile, nicht fuer onboard/)
     ├── input/
     │   ├── ds425-pushbutton/        README.md · dimensions.json · bilder/
     │   └── ec11-encoder/
-    └── servo/
-        └── miuzei-9g-servo/
+    ├── servo/
+    │   └── miuzei-9g-servo/
+    └── output/
+        └── ws2812b-led-strip/
 ```
 
 ## Samples
@@ -111,6 +117,14 @@ micro_bit/
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [winkel-mit-encoder](code-samples/servo/miuzei-9g-servo/winkel-mit-encoder/) | EC11-Drehknopf stellt den Winkel |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [endlagen-kalibrieren](code-samples/servo/miuzei-9g-servo/endlagen-kalibrieren/) | sichere Endpunkte einer eigenen Mechanik finden |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [bolzen-schalten](code-samples/servo/miuzei-9g-servo/bolzen-schalten/) | zwischen zwei kalibrierten Endpunkten fahren (Endanschlag) |
+
+### output
+
+| Bauteil | Sample | Beschreibung |
+|---------|--------|--------------|
+| [ws2812b-led-strip](code-samples/output/ws2812b-led-strip/) | [erste-farben](code-samples/output/ws2812b-led-strip/erste-farben/) | Strip zum Leuchten bringen, LEDs einfaerben |
+| [ws2812b-led-strip](code-samples/output/ws2812b-led-strip/) | [lauflicht](code-samples/output/ws2812b-led-strip/lauflicht/) | ein Punkt wandert, Knopf A/B = Tempo |
+| [ws2812b-led-strip](code-samples/output/ws2812b-led-strip/) | [regenbogen](code-samples/output/ws2812b-led-strip/regenbogen/) | Regenbogen laeuft ueber den Strip |
 
 *Weitere Kategorien, Bauteile und Samples folgen.*
 

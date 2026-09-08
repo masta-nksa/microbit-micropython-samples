@@ -1,0 +1,16 @@
+{
+  "part": "WS2812B LED-Strip (5050, weisse Platine, IP30)",
+  "slug": "ws2812b-led-strip",
+  "kind": "led-strip",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - typische Werte fuer 5050-WS2812B-Strip, noch nicht gemessen",
+  "strip": { "width": 10.0, "thickness": 2.0, "led_pitch": 33.3, "leds_per_m": 30 },
+  "note_pitch": "led_pitch und leds_per_m an den echten Strip anpassen (30 / 60 / 144 pro Meter)",
+  "mount": { "type": "adhesive", "detail": "3M-Klebeband auf der Rueckseite" },
+  "electrical": { "voltage": 5.0, "voltage_max": 5.5, "current_per_led_mA": 60, "data": "1-wire WS2812B, 800 kHz" },
+  "cad": {
+    "channel_slot": { "shape": "rect", "width": 10.4, "depth": 2.4, "tolerance": 0.2 },
+    "note": "Nut fuer ein Alu-Profil / Diffusor. Werte pruefen."
+  }
+}

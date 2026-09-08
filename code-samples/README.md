@@ -45,7 +45,7 @@ von `main.py` ein. Einzige Quelle bleibt `main.py`; nach jeder Aenderung daran
 | [onboard/](onboard/) | eingebaut: Knoepfe, Matrix, Lautsprecher, Mikrofon, Sensoren | in Arbeit |
 | [input/](input/) | externe Eingabe: Taster, Rotary-Encoder, Poti, Joystick | in Arbeit |
 | [servo/](servo/) | Servomotoren | in Arbeit |
-| [output/](output/) | externe Ausgabe: LCD-Display, Segmentanzeige, LED-Strips | geplant |
+| [output/](output/) | externe Ausgabe: LED-Strips, LCD-/OLED-Display, Segmentanzeige | in Arbeit |
 
 Bei `onboard/` gibt es **keine Verkabelung** und keinen `hardware/`-Ordner -
 alles ist schon im micro:bit V2.2 drin.
