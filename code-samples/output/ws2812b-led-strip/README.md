@@ -47,6 +47,11 @@ Das **Datenkabel gibt es nur einmal** (Pad `DIN` am Eingang bzw. `DO` am Ausgang
 Fuer den Anschluss: alle `5V` zusammen an `+`, alle `GND` zusammen an `-`
 (und an micro:bit `GND`), das eine Datenkabel an `P0`.
 
+**Bei wenigen LEDs (bis ~30) reicht der 3-polige Stecker allein.** Die dicken
+Extra-Kabel dann offen lassen und die **blanken Enden isolieren** (Tape oder
+abschneiden), damit nichts an Masse kommt. Die **Ausgangs-Pads bleiben offen** -
+kein Abschlusswiderstand noetig, `DO` darf frei haengen.
+
 ## Anschluss an den micro:bit
 
 Der micro:bit kann den Strip **nicht** mit Strom versorgen: der `3V`-Pin hat
