@@ -70,6 +70,47 @@ Eine LED auf vollem Weiss zieht ~**60 mA**. Bei `ANZAHL` LEDs also bis zu
 gedimmten Farben. In allen Beispielen sind die Farbwerte klein gehalten
 (max ~60 statt 255).
 
+## Strip zuschneiden und Kabel anloeten
+
+Der Strip laesst sich **nur an den markierten Linien** trennen - zwischen
+je zwei LEDs verlaeuft eine Linie mit durchgehenden Kupfer-Pads (oft mit
+Schere-Symbol). Fuer **5er-Gruppen** also nach jeder 5. LED schneiden.
+
+Jedes Segment hat zwei Enden mit je drei Pads:
+
+```
+   Eingang  (Pfeil zeigt in das Segment)        Ausgang
+   5V  DIN  GND   [ LED LED LED LED LED ]   5V  DO  GND
+```
+
+**Ein einzelnes Segment anschliessen:** 3 Litzen an die **Eingangs**-Pads
+(`5V`, `DIN`, `GND`) - `DIN` an `P0`, `5V`/`GND` an die 4,5-V-Box (Masse
+gemeinsam mit dem micro:bit).
+
+**Segmente verketten:** vom **Ausgang** des einen zum **Eingang** des
+naechsten je drei kurze Litzen:
+
+```
+   Segment A  Ausgang         Segment B  Eingang
+        5V  ------------------------  5V
+        DO  ------------------------  DIN
+        GND ------------------------  GND
+```
+
+- Immer **Ausgang -> Eingang**, nie umgekehrt (Pfeilrichtung).
+- Duenne Litze (26-28 AWG). Pad und Draht vorher verzinnen, dann kurz
+  (1-2 s, ~320 Grad) loeten - die Pads loesen sich bei zu viel Hitze.
+- **Zugentlastung:** ein Tropfen Heisskleber ueber jede Loetstelle.
+- Wer es steckbar will: 3-polige JST-SM-Stecker an die Enden loeten.
+
+**Strom:** `5V` und `GND` laufen ueber die ganze Kette mit. Bis ~50 LEDs
+gesamt reicht die Einspeisung am Anfang; bei mehr zusaetzlich am Ende der
+Kette `5V`/`GND` anschliessen.
+
+**Im Code:** `ANZAHL` = **Summe aller LEDs** in der Kette (z. B. 4 Segmente
+x 5 = 20). Die LEDs sind durchgehend `0 .. ANZAHL-1` nummeriert, egal wo die
+Schnitte sind.
+
 ## MicroPython
 
 ```python
