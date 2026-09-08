@@ -28,8 +28,8 @@ Masse fuers CAD: [../../../../hardware/output/ws2812b-led-strip/](../../../../ha
 ```
 
 Am Ende anschliessen, wo die **Pfeile in den Strip** zeigen. Nach den
-Pad-Beschriftungen gehen, nicht nach Kabelfarbe. Details, Strom und
-5-V-Netzteil-Variante: [Bauteil-README](../README.md#anschluss-an-den-micro-bit).
+Pad-Beschriftungen gehen, nicht nach Kabelfarbe. Details und Strom:
+[Bauteil-README](../README.md#anschluss-an-den-micro-bit).
 
 ## Foto der Verkabelung
 

@@ -78,13 +78,6 @@ Schritt fuer Schritt:
 6. **Niemals** `+` der Box an `3V` oder einen Pin. **Kein** 6-V-Fach (4x 1.5 V) -
    das brennt die LEDs.
 
-### Statt der Box: das 5-V-Netzteil aus dem Set
-
-Gleiche Verdrahtung, nur `5V` statt `4,5V`. Heller und fuer mehr LEDs geeignet.
-Dann kann die **erste LED** wegen des 3,3-V-Signals zicken (Flackern, falsche
-Farbe). Abhilfe: Strip mit 4,5 V betreiben, **330 Ohm** in Reihe in die
-Datenleitung, oder einen Pegelwandler (74AHCT125) benutzen.
-
 ### Strom
 
 Eine LED auf vollem Weiss zieht ~**60 mA**. Bei `ANZAHL` LEDs also bis zu
