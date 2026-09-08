@@ -25,6 +25,28 @@ Der Strip hat **drei** Kontakte, an beiden Enden herausgefuehrt:
   Krokoklemmen.
 - Der Strip kann an den markierten Stellen (Schere-Symbol) gekuerzt werden.
 
+### Warum sind es 5 Kabel?
+
+Elektrisch braucht der Strip nur **drei** Leitungen (`5V`, `GND`, Data).
+Fuenf Kabel am Eingang sind trotzdem ueblich:
+
+| Kabel | wohin |
+|---|---|
+| 3-poliger JST-SM-Stecker | `5V` + `DIN` + `GND` |
+| extra rot (dick) | nochmal `5V` |
+| extra weiss/schwarz (dick) | nochmal `GND` |
+
+Der 3-polige Stecker ist zum **Weiterverbinden / fuer die Daten**, das dicke
+rot/weiss-Paar ist die **Strom-Einspeisung** direkt an den `5V`/`GND`-Pads -
+die duennen Steckerdraehte wuerden bei vielen LEDs zu heiss.
+
+**So findest du raus, was was ist:** jedes Kabel bis zu seinem Pad verfolgen.
+Zwei Kabel am selben `5V`-Pad = Stecker + Einspeisung (parallel, macht nichts).
+Das **Datenkabel gibt es nur einmal** (Pad `DIN` am Eingang bzw. `DO` am Ausgang).
+
+Fuer den Anschluss: alle `5V` zusammen an `+`, alle `GND` zusammen an `-`
+(und an micro:bit `GND`), das eine Datenkabel an `P0`.
+
 ## Anschluss an den micro:bit
 
 Der micro:bit kann den Strip **nicht** mit Strom versorgen: der `3V`-Pin hat
