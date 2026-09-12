@@ -55,6 +55,22 @@ ohne Namen `main.py`, mit Namen die Datei mit genau diesem Namen im selben
 Ordner. Wie man eine zweite Datei im Online-Editor anlegt, steht in
 [docs/setup.md](../docs/setup.md#zweite-datei-hinzufuegen-z-b-eine-mitgelieferte-bibliothek).
 
+### Teststand festhalten
+
+Sobald ein Sample (oder ein ganzes Bauteil) auf echter Hardware ausprobiert
+wurde, kommt das als kurzer **"Stand"-Satz mit Datum** direkt unter die
+Kurzbeschreibung am Anfang der README - Bauteil-README fuer "gilt fuer alle
+Samples", einzelne Sample-README wenn nur eines geprueft ist:
+
+```
+**Stand (12.09.2026):** auf echter Hardware getestet - funktioniert.
+```
+
+bzw. bei offenen Punkten kurz benennen, was noch fehlt (z. B. "noch nicht
+getestet", "ein Wert noch nicht kalibriert"). Kein eigener Abschnitt, keine
+Tabelle - nur ehrlich festhalten, was tatsaechlich schon lief. Beispiele:
+[tm1637-4digit](output/tm1637-4digit/README.md), [hc-sr04-abstandssensor](input/hc-sr04-abstandssensor/README.md).
+
 ## Kategorien
 
 | Kategorie | Inhalt | Status |

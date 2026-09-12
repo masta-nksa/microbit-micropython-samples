@@ -4,6 +4,11 @@ Misst den Abstand zu einem Hindernis per Ultraschall-Laufzeit: ein kurzer
 Trigger-Impuls loest einen Schallstoss aus, der Sensor haelt `Echo` so lange
 auf High, wie das Echo unterwegs war.
 
+**Stand (12.09.2026):** Verkabelung und Code sind fertig, **aber noch nicht
+auf echter Hardware getestet** (folgt). `entfernungsanzeige-tm1637` nutzt auf
+der Anzeigen-Seite dieselbe Bibliothek wie [tm1637-4digit](../../output/tm1637-4digit/)
+(dort bereits bestaetigt) - offen ist nur noch die Sensor-Seite hier.
+
 ## Anschluesse am Modul
 
 | Pin (Beschriftung, bei diesem konkreten Modul von oben nach unten) | Bedeutung |

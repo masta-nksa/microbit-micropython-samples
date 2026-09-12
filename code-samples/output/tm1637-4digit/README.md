@@ -4,6 +4,10 @@
 vieler Segment-Leitungen braucht sie nur **zwei** Datenleitungen (CLK, DIO) -
 der Chip uebernimmt das Multiplexen der vier Ziffern selbst.
 
+**Stand (12.09.2026):** mit der Bibliothek `tm1637.py`
+([mcauser/microbit-tm1637](https://github.com/mcauser/microbit-tm1637)) auf
+echter Hardware getestet - **funktioniert**.
+
 ## Anschluesse am Modul
 
 | Pin (Beschriftung auf dem Modul) | Bedeutung |
