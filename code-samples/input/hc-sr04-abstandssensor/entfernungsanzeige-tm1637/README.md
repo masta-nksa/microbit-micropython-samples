@@ -152,8 +152,11 @@ def anzeige(d0, d1, d2, d3, doppelpunkt=False):
 
 
 def zahl_in_ziffern(n):
+    # MicroPython kennt kein str.rjust() - darum von Hand auffuellen.
     n = max(0, min(9999, n))
-    text = str(n).rjust(4)
+    text = str(n)
+    while len(text) < 4:
+        text = " " + text
     return [int(z) if z != " " else None for z in text]
 
 

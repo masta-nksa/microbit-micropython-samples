@@ -75,9 +75,12 @@ def anzeige(d0, d1, d2, d3, doppelpunkt=False):
 
 
 def zahl_in_ziffern(n):
-    # Zahl 0..9999 in 4 Ziffern zerlegen - fuehrende Leerstellen statt Nullen
+    # Zahl 0..9999 in 4 Ziffern zerlegen - fuehrende Leerstellen statt Nullen.
+    # MicroPython kennt kein str.rjust() - darum von Hand auffuellen.
     n = max(0, min(9999, n))
-    text = str(n).rjust(4)
+    text = str(n)
+    while len(text) < 4:
+        text = " " + text
     return [int(z) if z != " " else None for z in text]
 
 
