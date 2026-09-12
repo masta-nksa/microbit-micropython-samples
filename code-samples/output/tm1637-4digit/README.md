@@ -42,39 +42,58 @@ Stromquelle**: der Chip laeuft mit 3.3-5.5 V, der micro:bit-`3V`-Pin reicht.
 ```
 
 - Bei **voller Helligkeit mit allen Segmenten aller 4 Ziffern** kann der
-  Strom spuerbar werden. In den Samples ist `HELLIGKEIT` niedrig voreingestellt
-  (3 von 0-7). Flackert die Anzeige oder startet der micro:bit neu: `HELLIGKEIT`
-  senken oder wie beim Servo/Strip eine externe 4,5-5-V-Quelle mit gemeinsamer
-  Masse verwenden.
+  Strom spuerbar werden. In den Samples ist die Helligkeit niedrig
+  voreingestellt (3 von 0-7). Flackert die Anzeige oder startet der micro:bit
+  neu: Helligkeit senken oder wie beim Servo/Strip eine externe 4,5-5-V-Quelle
+  mit gemeinsamer Masse verwenden.
 - Kein Level-Shifter noetig - anders als beim WS2812B ist das TM1637-Protokoll
   bit-gebanged und tolerant gegenueber 3,3-V-Pegeln.
 
-## Das Protokoll (kurz)
+## Bibliothek statt Eigenbau: mcauser/microbit-tm1637
+
+Alle Samples nutzen die fertige, micro:bit-native Bibliothek
+[**microbit-tm1637**](https://github.com/mcauser/microbit-tm1637) von Mike
+Causer (MIT-Lizenz) als zweite Projektdatei `tm1637.py` - wie man die im
+Online-Editor anlegt, steht in
+[docs/setup.md](../../../docs/setup.md#zweite-datei-hinzufuegen-z-b-eine-mitgelieferte-bibliothek).
+
+**Wichtig beim Suchen:** es gibt von Mike Causer **zwei** aehnlich benannte
+Bibliotheken -
+
+| Repo | fuer | passt hier? |
+|------|------|-------------|
+| [mcauser/**microbit-tm1637**](https://github.com/mcauser/microbit-tm1637) | micro:bit MicroPython (`microbit.pinX.write_digital()`) | **ja** - genau das wird verwendet |
+| [mcauser/**micropython-tm1637**](https://github.com/mcauser/micropython-tm1637) | "grosses" MicroPython auf ESP32/Pico/Pyboard (`machine.Pin(nummer, Pin.OUT)`) | **nein** - der micro:bit hat kein `machine.Pin`, das Modul liefe so nicht |
+
+Die micro:bit-Variante bringt mehr mit als unser fruehrer Eigenbau-Treiber:
+
+```python
+from microbit import *
+from tm1637 import TM1637
+
+tm = TM1637(clk=pin1, dio=pin2, brightness=3)   # 0 (dunkel) .. 7 (hell)
+
+tm.number(1234)              # -999..9999, rechtsbuendig
+tm.numbers(12, 34, colon=True)   # zwei 2-stellige Zahlen + Doppelpunkt, z. B. Uhrzeit
+tm.show("HELP")              # Text (0-9, A-Z, Leerzeichen, - und Grad-Symbol)
+tm.scroll("HALLO MICROBIT")  # Text durchlaufen lassen
+tm.hex(0x2A)                 # Hexadezimal
+tm.temperature(temperature())    # mit automatischem Grad-Symbol, LO/HI bei Ueberlauf
+tm.brightness(5)             # Helligkeit nachtraeglich aendern
+```
+
+## Das Protokoll (Hintergrund)
 
 TM1637 spricht ein I2C-aehnliches, aber eigenes Protokoll: **Start** = DIO
 faellt, waehrend CLK hoch ist. **Stop** = DIO steigt, waehrend CLK hoch ist.
-Dazwischen werden Bytes LSB-zuerst getaktet. Ein fertiges MicroPython-Modul
-gibt es im micro:bit-Editor nicht eingebaut - darum bringt jedes Sample einen
-**kompletten, kleinen Treiber direkt mit** (Funktionen `_start`, `_stop`,
-`_write_byte`, `anzeige`). Nichts extra zu installieren, einfach den ganzen
-Code kopieren.
-
-Wichtige Befehle:
-
-| Byte | Bedeutung |
-|---|---|
-| `0x40` | Datenbefehl: Adresse zaehlt beim Schreiben automatisch weiter |
-| `0xC0` | Adressbefehl: Startadresse 0 (erste Ziffer) |
-| `0x88 \| HELLIGKEIT` | Anzeige an, Helligkeit 0-7 |
-
-`anzeige(d0, d1, d2, d3, doppelpunkt=False)` nimmt vier Ziffern (`0-9` oder
-`None` fuer eine leere Stelle). Der **Doppelpunkt** haengt bei den meisten
-Modulen am Bit `0x80` der **zweiten** Ziffer - bei manchen Modulen kann das
-abweichen, dann im Code die Stelle (`i == 1`) anpassen.
+Dazwischen werden Bytes LSB-zuerst getaktet, adressiert per Befehlsbyte
+(`0x40` automatische Adresse, `0xC0` Startadresse 0, `0x88 | Helligkeit`
+Anzeige an). Genau das erledigt `tm1637.py` intern - fuer die Samples reicht
+der Blick auf die Bibliotheks-Methoden oben.
 
 ## Samples (Lernreihenfolge)
 
-1. [zahl-anzeigen/](zahl-anzeigen/) - Grundfunktion, ein paar Zahlen zeigen (enthaelt den Treiber)
+1. [zahl-anzeigen/](zahl-anzeigen/) - Grundfunktion, ein paar Zahlen zeigen
 2. [zaehler/](zaehler/) - Knopf A/B zaehlen 0..9999, A+B = Reset
 3. [stoppuhr/](stoppuhr/) - MM:SS, Start/Pause, Reset, blinkender Doppelpunkt
 

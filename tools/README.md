@@ -17,6 +17,15 @@ In der README markieren die Zeilen
 die Stelle, an der der Code stehen soll. Alles dazwischen wird beim Ausfuehren
 durch einen ` ```python `-Block mit dem aktuellen `main.py`-Inhalt ersetzt.
 
+Eine README kann **mehrere** Marker-Paare haben. Ein Paar mit Dateinamen nach
+dem Doppelpunkt liest eine andere Datei aus demselben Ordner statt `main.py`
+(z. B. eine mitgelieferte Bibliothek):
+
+```
+<!-- CODE:START:tm1637.py -->
+<!-- CODE:END -->
+```
+
 ```bash
 python tools/build_readme.py            # READMEs aktualisieren
 python tools/build_readme.py --check    # nur pruefen (Exit 1, wenn veraltet)

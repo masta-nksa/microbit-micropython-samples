@@ -38,6 +38,23 @@ traegt [`tools/build_readme.py`](../tools/build_readme.py) den aktuellen Inhalt
 von `main.py` ein. Einzige Quelle bleibt `main.py`; nach jeder Aenderung daran
 `python tools/build_readme.py` ausfuehren (`--check` meldet veraltete READMEs).
 
+### Sample mit externer Bibliothek (2. Datei)
+
+Nutzt ein Sample eine mitgelieferte Bibliothek (z. B. `tm1637.py`, siehe
+[output/tm1637-4digit/](output/tm1637-4digit/)), kommt vor `## Programm` ein
+eigener Abschnitt `## Bibliothek: <dateiname>` mit einem zweiten Marker-Paar,
+das den Dateinamen nach dem Doppelpunkt traegt:
+
+```
+<!-- CODE:START:tm1637.py -->
+<!-- CODE:END -->
+```
+
+`build_readme.py` fuellt jedes Marker-Paar mit der jeweils genannten Datei -
+ohne Namen `main.py`, mit Namen die Datei mit genau diesem Namen im selben
+Ordner. Wie man eine zweite Datei im Online-Editor anlegt, steht in
+[docs/setup.md](../docs/setup.md#zweite-datei-hinzufuegen-z-b-eine-mitgelieferte-bibliothek).
+
 ## Kategorien
 
 | Kategorie | Inhalt | Status |

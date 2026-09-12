@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-"""Fuegt den Inhalt jeder main.py in die zugehoerige README.md ein.
+"""Fuegt main.py (und ggf. weitere Dateien) in die zugehoerige README.md ein.
 
-Fuer jede Datei code-samples/**/README.md, die die beiden Marker
+Fuer jede Datei code-samples/**/README.md mit einem oder mehreren Marker-Paaren
 
-    <!-- CODE:START -->
+    <!-- CODE:START -->                 main.py
     <!-- CODE:END -->
 
-enthaelt, wird der Bereich dazwischen durch einen ```python-Block mit dem
-aktuellen Inhalt der daneben liegenden main.py ersetzt. So ist der Code in
-der README immer identisch zu main.py, ohne ihn von Hand zu pflegen.
+    <!-- CODE:START:tm1637.py -->       eine zusaetzliche Datei (z. B. eine
+    <!-- CODE:END -->                   mitgelieferte Bibliothek), Name nach
+                                        dem Doppelpunkt
+
+wird der Bereich zwischen START und END durch einen ```python-Block mit dem
+aktuellen Inhalt der genannten Datei ersetzt (ohne Namen = main.py). So ist
+der Code in der README immer identisch zu main.py & Co., ohne ihn von Hand
+zu pflegen. Ein Sample mit externer Bibliothek nutzt einfach zwei
+Marker-Paare in seiner README.
 
 Aufruf (vom Repo-Wurzelverzeichnis):
     python tools/build_readme.py            READMEs aktualisieren
@@ -16,32 +22,49 @@ Aufruf (vom Repo-Wurzelverzeichnis):
 """
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SAMPLES_DIR = ROOT / "code-samples"
-START = "<!-- CODE:START -->"
-END = "<!-- CODE:END -->"
+
+BLOCK_RE = re.compile(
+    r"<!-- CODE:START(?::(?P<file>\S+))? -->.*?<!-- CODE:END -->",
+    re.DOTALL,
+)
 
 
-def build_block(code: str) -> str:
-    return f"{START}\n```python\n{code.rstrip()}\n```\n{END}"
+def build_block(filename: str | None, code: str) -> str:
+    header = f"<!-- CODE:START:{filename} -->" if filename else "<!-- CODE:START -->"
+    return f"{header}\n```python\n{code.rstrip()}\n```\n<!-- CODE:END -->"
 
 
 def process(readme: Path, check: bool) -> str:
     """Gibt 'skip', 'ok' oder 'stale' zurueck."""
     text = readme.read_text(encoding="utf-8")
-    if START not in text or END not in text:
+    matches = list(BLOCK_RE.finditer(text))
+    if not matches:
         return "skip"
 
-    main_py = readme.parent / "main.py"
-    if not main_py.exists():
-        # z. B. eine Doku-Seite, die die Marker nur als Beispiel zeigt - ignorieren
+    # Ohne main.py daneben ist es keine Sample-README, sondern z. B. eine
+    # Doku-Seite, die die Marker nur als Beispiel zeigt - ignorieren.
+    if not (readme.parent / "main.py").exists():
         return "skip"
 
-    code = main_py.read_text(encoding="utf-8")
-    new_text = text.split(START)[0] + build_block(code) + text.split(END, 1)[1]
+    replacements = []
+    for m in matches:
+        filename = m.group("file") or "main.py"
+        src = readme.parent / filename
+        if not src.exists():
+            print(f"  ! {readme.relative_to(ROOT)}: {filename} fehlt neben der README")
+            return "skip"
+        code = src.read_text(encoding="utf-8")
+        replacements.append((m.start(), m.end(), build_block(m.group("file"), code)))
+
+    new_text = text
+    for start, end, block in reversed(replacements):
+        new_text = new_text[:start] + block + new_text[end:]
 
     if new_text == text:
         return "ok"

@@ -15,6 +15,20 @@ Fuer alle Aufgaben in diesem Repo wird der Online-Editor verwendet:
 6. **Serielle Ausgabe / REPL:** unten auf **Open Serial** klicken, um
    `print(...)`-Ausgaben zu sehen.
 
+## Zweite Datei hinzufuegen (z. B. eine mitgelieferte Bibliothek)
+
+Manche Samples liefern neben `main.py` eine zweite Datei mit, z. B. eine
+kleine Bibliothek wie `tm1637.py`. Beide muessen im selben Projekt landen:
+
+1. Im Editor links im Dateibereich auf **das Plus-Symbol** bzw. **"Neue
+   Datei"** klicken (Beschriftung kann je nach Editor-Version leicht
+   abweichen).
+2. Die Datei **exakt** so benennen, wie im Sample angegeben (z. B.
+   `tm1637.py`) - der Dateiname wird zum Modulnamen fuer `import`.
+3. Den Bibliothekscode aus der README hineinkopieren, speichern.
+4. In `main.py` ganz normal importieren, z. B. `from tm1637 import TM1637`.
+5. **Send to micro:bit** uebertraegt danach beide Dateien zusammen.
+
 ## Alternative: .hex-Datei
 
 Im Editor **Save** -> es wird eine `.hex`-Datei heruntergeladen.
