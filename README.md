@@ -61,10 +61,14 @@ micro_bit/
 │   │       ├── endlagen-kalibrieren/
 │   │       └── bolzen-schalten/
 │   └── output/
-│       └── ws2812b-led-strip/
-│           ├── erste-farben/
-│           ├── lauflicht/
-│           └── regenbogen/
+│       ├── ws2812b-led-strip/
+│       │   ├── erste-farben/
+│       │   ├── lauflicht/
+│       │   └── regenbogen/
+│       └── tm1637-4digit/
+│           ├── zahl-anzeigen/
+│           ├── zaehler/
+│           └── stoppuhr/
 │
 └── hardware/                        Masse fuers CAD, gleicher Pfad wie code-samples
                                      (nur fuer externe Bauteile, nicht fuer onboard/)
@@ -74,7 +78,8 @@ micro_bit/
     ├── servo/
     │   └── miuzei-9g-servo/
     └── output/
-        └── ws2812b-led-strip/
+        ├── ws2812b-led-strip/
+        └── tm1637-4digit/
 ```
 
 ## Samples
@@ -125,6 +130,9 @@ micro_bit/
 | [ws2812b-led-strip](code-samples/output/ws2812b-led-strip/) | [erste-farben](code-samples/output/ws2812b-led-strip/erste-farben/) | Strip zum Leuchten bringen, LEDs einfaerben |
 | [ws2812b-led-strip](code-samples/output/ws2812b-led-strip/) | [lauflicht](code-samples/output/ws2812b-led-strip/lauflicht/) | ein Punkt wandert, Knopf A/B = Tempo |
 | [ws2812b-led-strip](code-samples/output/ws2812b-led-strip/) | [regenbogen](code-samples/output/ws2812b-led-strip/regenbogen/) | Regenbogen laeuft ueber den Strip |
+| [tm1637-4digit](code-samples/output/tm1637-4digit/) | [zahl-anzeigen](code-samples/output/tm1637-4digit/zahl-anzeigen/) | Grundfunktion, Treiber inklusive |
+| [tm1637-4digit](code-samples/output/tm1637-4digit/) | [zaehler](code-samples/output/tm1637-4digit/zaehler/) | Knopf A/B zaehlen 0..9999, A+B = Reset |
+| [tm1637-4digit](code-samples/output/tm1637-4digit/) | [stoppuhr](code-samples/output/tm1637-4digit/stoppuhr/) | MM:SS, Start/Pause/Reset, blinkender Doppelpunkt |
 
 *Weitere Kategorien, Bauteile und Samples folgen.*
 

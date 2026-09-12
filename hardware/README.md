@@ -56,3 +56,4 @@ Nicht zutreffende Felder weglassen. Ein CAD-Skript liest immer
 | [ec11-encoder](input/ec11-encoder/) | input | nein |
 | [miuzei-9g-servo](servo/miuzei-9g-servo/) | servo | nein |
 | [ws2812b-led-strip](output/ws2812b-led-strip/) | output | nein |
+| [tm1637-4digit](output/tm1637-4digit/) | output | nein |

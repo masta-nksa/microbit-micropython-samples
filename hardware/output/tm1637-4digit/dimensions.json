@@ -1,0 +1,16 @@
+{
+  "part": "TM1637 4-Digit-7-Segment-Anzeige",
+  "slug": "tm1637-4digit",
+  "kind": "digit-display",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - Module gibt es in mehreren Groessen (0.36\" / 0.56\"), noch nicht gemessen",
+  "board": { "width": 50.9, "depth": 19.2, "height": 8.0 },
+  "digits": { "count": 4, "digit_height": 14.2, "note": "0.56-Zoll-Variante; bei 0.36-Zoll entsprechend kleiner" },
+  "mount": { "type": "pcb-holes", "holes": 2, "hole_dia": 2.0 },
+  "electrical": { "voltage_min": 3.3, "voltage_max": 5.5, "interface": "TM1637, 2-Draht (CLK/DIO)" },
+  "cad": {
+    "panel_cutout": { "shape": "rect", "width": 46.0, "depth": 15.0, "tolerance": 0.3 },
+    "note": "Sichtfenster fuer die 4 Ziffern. Masse je nach Modul-Variante pruefen."
+  }
+}
