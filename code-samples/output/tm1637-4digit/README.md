@@ -16,6 +16,16 @@ der Chip uebernimmt das Multiplexen der vier Ziffern selbst.
 Die **Reihenfolge der 4 Pins ist von Modul zu Modul unterschiedlich** - nach
 der Beschriftung anschliessen, nicht nach der Position.
 
+**Konkretes Beispiel** (ein tatsaechlich verwendetes Modul, Beschriftung auf
+der Rueckseite von links nach rechts): `GND` `VCC` `DIO` `CLK`. Also nicht
+automatisch von "erster Pin = CLK" ausgehen - immer selbst nachsehen.
+
+Manche Module zeigen die 4 Ziffern **untereinander statt nebeneinander**
+(die Anzeige-Einheit ist auf der Platine um 90 Grad gedreht). Elektrisch und
+im Code macht das keinen Unterschied - die Zahl laeuft dann nur von oben nach
+unten statt von links nach rechts. Mit [zahl-anzeigen](zahl-anzeigen/) testen,
+in welcher Reihenfolge und wo bei deinem Modul der Doppelpunkt sitzt.
+
 ## Anschluss an den micro:bit
 
 Anders als der WS2812B-Strip braucht die TM1637-Anzeige **keine externe
