@@ -1,0 +1,16 @@
+{
+  "part": "HC-SR04 Ultraschall-Abstandssensor",
+  "slug": "hc-sr04-abstandssensor",
+  "kind": "ultrasonic-sensor",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - typische HC-SR04-Masse, noch nicht gemessen",
+  "board": { "width": 45.0, "depth": 20.0, "height": 15.0 },
+  "transducers": { "count": 2, "diameter": 16.0, "spacing_center_to_center": 26.0, "protrusion": 6.0 },
+  "mount": { "type": "pcb-holes", "holes": 2, "hole_dia": 2.0, "hole_spacing": 41.5 },
+  "electrical": { "voltage": 5.0, "voltage_alt": 3.3, "pins": 4 },
+  "cad": {
+    "panel_cutout": { "shape": "circle-pair", "diameter": 16.4, "spacing": 26.0, "tolerance": 0.2 },
+    "note": "Zwei runde Ausschnitte fuer die Wandler, Platine dahinter. Werte pruefen."
+  }
+}

@@ -48,10 +48,14 @@ micro_bit/
 │   │   ├── ds425-pushbutton/
 │   │   │   ├── ton-bei-druck/       main.py · README.md · wiring/
 │   │   │   └── ton-solange-gedrueckt/
-│   │   └── ec11-encoder/
-│   │       ├── drehen-zaehler/
-│   │       ├── drehen-und-druck/
-│   │       └── ton-hoehe-einstellen/
+│   │   ├── ec11-encoder/
+│   │   │   ├── drehen-zaehler/
+│   │   │   ├── drehen-und-druck/
+│   │   │   └── ton-hoehe-einstellen/
+│   │   └── hc-sr04-abstandssensor/
+│   │       ├── abstand-messen/
+│   │       ├── naeherungsalarm/
+│   │       └── entfernungsanzeige-tm1637/
 │   ├── servo/
 │   │   └── miuzei-9g-servo/
 │   │       ├── a-b-drehen/
@@ -74,7 +78,8 @@ micro_bit/
                                      (nur fuer externe Bauteile, nicht fuer onboard/)
     ├── input/
     │   ├── ds425-pushbutton/        README.md · dimensions.json · bilder/
-    │   └── ec11-encoder/
+    │   ├── ec11-encoder/
+    │   └── hc-sr04-abstandssensor/
     ├── servo/
     │   └── miuzei-9g-servo/
     └── output/
@@ -111,6 +116,9 @@ micro_bit/
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [drehen-zaehler](code-samples/input/ec11-encoder/drehen-zaehler/) | Wert 0..9 per Drehknopf |
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [drehen-und-druck](code-samples/input/ec11-encoder/drehen-und-druck/) | zusaetzlich: Druck = Reset auf 0 |
 | [ec11-encoder](code-samples/input/ec11-encoder/) | [ton-hoehe-einstellen](code-samples/input/ec11-encoder/ton-hoehe-einstellen/) | Drehen = Tonhoehe, Druck = an/aus |
+| [hc-sr04-abstandssensor](code-samples/input/hc-sr04-abstandssensor/) | [abstand-messen](code-samples/input/hc-sr04-abstandssensor/abstand-messen/) | Abstand als LED-Balken + Zahl seriell |
+| [hc-sr04-abstandssensor](code-samples/input/hc-sr04-abstandssensor/) | [naeherungsalarm](code-samples/input/hc-sr04-abstandssensor/naeherungsalarm/) | piept schneller, je naeher ein Hindernis ist |
+| [hc-sr04-abstandssensor](code-samples/input/hc-sr04-abstandssensor/) | [entfernungsanzeige-tm1637](code-samples/input/hc-sr04-abstandssensor/entfernungsanzeige-tm1637/) | Abstand in cm auf der TM1637-Anzeige |
 
 ### servo
 
