@@ -61,14 +61,6 @@ Causer (MIT-Lizenz) als zweite Projektdatei `tm1637.py` - wie man die im
 Online-Editor anlegt, steht in
 [docs/setup.md](../../../docs/setup.md#zweite-datei-hinzufuegen-z-b-eine-mitgelieferte-bibliothek).
 
-**Wichtig beim Suchen:** es gibt von Mike Causer **zwei** aehnlich benannte
-Bibliotheken -
-
-| Repo | fuer | passt hier? |
-|------|------|-------------|
-| [mcauser/**microbit-tm1637**](https://github.com/mcauser/microbit-tm1637) | micro:bit MicroPython (`microbit.pinX.write_digital()`) | **ja** - genau das wird verwendet |
-| [mcauser/**micropython-tm1637**](https://github.com/mcauser/micropython-tm1637) | "grosses" MicroPython auf ESP32/Pico/Pyboard (`machine.Pin(nummer, Pin.OUT)`) | **nein** - der micro:bit hat kein `machine.Pin`, das Modul liefe so nicht |
-
 Die micro:bit-Variante bringt mehr mit als unser fruehrer Eigenbau-Treiber:
 
 ```python
