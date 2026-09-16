@@ -3,6 +3,9 @@
 Masse ausgewaehlter Bauteile, damit daraus Panel-Ausschnitte, Halterungen und
 Gehaeuse im CAD (z. B. Fusion) erzeugt werden koennen.
 
+Schnitt-/Gravurparameter fuers Serienmaterial und eine LightBurn-Kurzanleitung:
+[lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md).
+
 ## Aufbau
 
 `hardware/<kategorie>/<bauteil>/` - **gleicher Pfad** wie unter

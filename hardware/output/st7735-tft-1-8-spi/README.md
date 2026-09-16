@@ -25,7 +25,7 @@ Maschinenlesbar: [`dimensions.json`](dimensions.json)
 ## 3D-Druck & Ausschnitt (Download)
 
 - [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Sichtfenster-Ausschnitt fuer den Lasercutter
-  (Pappelsperrholz).
+  (Pappelsperrholz). Schnittparameter: [lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
 - [`cad/halterung.stl`](cad/halterung.stl) - 3D-druckbare Halterung fuers Modul
   (auf GitHub direkt als 3D-Modell anschaubar, kein Download noetig).
 

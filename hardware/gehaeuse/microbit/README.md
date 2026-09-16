@@ -32,6 +32,9 @@ pro Schnitt. Beim eigenen Lasercutter den Kerf am Testmaterial ermitteln und
 bei Abweichung in Fusion neu exportieren statt die DXF von Hand
 nachzuschneiden.
 
+Schnitt-/Gravur-Layer-Werte fuer 6 mm Pappelsperrholz (Speed, Power, Fokus,
+LightBurn-Kurzanleitung): [../../lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
+
 ![Vorschau BOX_KOMPLETT.dxf](bilder/box-komplett-vorschau.png)
 
 | Datei | Vorschau |

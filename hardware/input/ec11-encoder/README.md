@@ -30,6 +30,7 @@ Maschinenlesbar: [`dimensions.json`](dimensions.json)
 
 - [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Panel-Ausschnitt fuer den Lasercutter
   (Pappelsperrholz), passend zum obigen Rundloch + Verdrehschutz-Stift.
+  Schnittparameter: [lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
 
   ![Vorschau ausschnitt.dxf](bilder/ausschnitt-vorschau.png)
 
