@@ -4,7 +4,8 @@
 > verbreitete 1.8"-ST7735-SPI-Module. Vor der Fertigung selbst messen und
 > `dimensions.json` -> `"verified": true`.
 
-Noch kein Code-Sample fuer dieses Bauteil vorhanden.
+Code-Samples zu diesem Bauteil (noch nicht auf echter Hardware getestet):
+[../../../code-samples/output/st7735-tft-1-8-spi/](../../../code-samples/output/st7735-tft-1-8-spi/)
 
 ## Masstabelle (mm)
 
