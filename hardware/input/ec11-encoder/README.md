@@ -26,6 +26,11 @@ Code-Samples zu diesem Bauteil:
 
 Maschinenlesbar: [`dimensions.json`](dimensions.json)
 
+## 3D-Druck & Ausschnitt (Download)
+
+- [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Panel-Ausschnitt fuer den Lasercutter
+  (Pappelsperrholz), passend zum obigen Rundloch + Verdrehschutz-Stift.
+
 ## Anschluss am micro:bit (Vorschau)
 
 - Encoder-Pins A/B an zwei GPIOs (z. B. `P0`, `P1`), Mittelpin an `GND`

@@ -1,0 +1,17 @@
+{
+  "part": "1.8\" TFT SPI Display (ST7735 V1.1)",
+  "slug": "st7735-tft-1-8-spi",
+  "kind": "display",
+  "units": "mm",
+  "verified": false,
+  "source": "PLATZHALTER - typische Werte fuer verbreitete 1.8-Zoll-ST7735-SPI-Module, noch nicht selbst gemessen. Ausschnitt-DXF stammt aus eigener Fusion-Konstruktion, am eigenen Modul pruefen.",
+  "board": { "width": 33.0, "depth": 51.0, "height": 4.0, "note": "inkl. Pinheader-Bereich, je nach Modulvariante unterschiedlich" },
+  "screen": { "active_width": 28.0, "active_height": 35.0, "resolution": "128x160" },
+  "mount": { "type": "screw-holes", "holes": 4, "hole_dia": 2.0 },
+  "electrical": { "voltage_min": 3.3, "voltage_max": 5.0, "interface": "SPI (CLK, MOSI, CS, DC, RST) + optional SD-Slot" },
+  "cad": {
+    "panel_cutout": { "shape": "rect", "width": 29.0, "depth": 36.0, "tolerance": 0.3 },
+    "note": "Sichtfenster fuer das aktive Display. Masse und Schraublochpositionen am eigenen Modul nachmessen."
+  },
+  "cad_files": { "ausschnitt": "cad/ausschnitt.dxf", "halterung": "cad/halterung.stl" }
+}

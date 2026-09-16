@@ -12,5 +12,6 @@
   "cad": {
     "panel_cutout": { "shape": "circle", "diameter": 4.0, "tolerance": 0.2 },
     "note": "Ausschnitt nur fuer den Stoessel. Gehaeuse sitzt hinter dem Panel. Werte pruefen, bevor gefertigt wird."
-  }
+  },
+  "cad_files": { "ausschnitt": "cad/ausschnitt.dxf" }
 }

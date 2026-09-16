@@ -12,5 +12,6 @@
   "cad": {
     "panel_cutout": { "shape": "rect", "width": 46.0, "depth": 15.0, "tolerance": 0.3 },
     "note": "Sichtfenster fuer die 4 Ziffern. Masse je nach Modul-Variante pruefen."
-  }
+  },
+  "cad_files": { "ausschnitt": "cad/ausschnitt.dxf", "halterung": "cad/halterung.stl" }
 }

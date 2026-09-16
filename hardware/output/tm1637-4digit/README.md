@@ -21,6 +21,12 @@ Code-Samples: [../../../code-samples/output/tm1637-4digit/](../../../code-sample
 
 Maschinenlesbar: [`dimensions.json`](dimensions.json)
 
+## 3D-Druck & Ausschnitt (Download)
+
+- [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Sichtfenster-Ausschnitt fuer den Lasercutter
+  (Pappelsperrholz).
+- [`cad/halterung.stl`](cad/halterung.stl) - 3D-druckbare Halterung fuers Modul.
+
 ## Bilder
 
 Datenblatt, Messfotos, CAD-Screenshots in [`bilder/`](bilder/).

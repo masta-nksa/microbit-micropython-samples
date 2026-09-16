@@ -17,5 +17,6 @@
     "panel_cutout": { "shape": "circle", "diameter": 7.2, "tolerance": 0.2 },
     "anti_rotation_pin": { "diameter": 2.0, "offset_from_center": 7.0 },
     "note": "Rundausschnitt fuer den Gewindebund + kleines Loch fuer den Verdrehschutz-Stift. Werte pruefen."
-  }
+  },
+  "cad_files": { "ausschnitt": "cad/ausschnitt.dxf" }
 }
