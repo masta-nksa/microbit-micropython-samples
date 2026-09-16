@@ -82,7 +82,7 @@ while True:
 ## Auf den micro:bit uebertragen
 
 Auf **beide** micro:bits denselben Code laden.
-<https://python.microbit.org/v/beta> -> Code einfuegen -> **Connect** -> **Send to micro:bit**.
+<https://python.microbit.org/v/3> -> Code einfuegen -> **Connect** -> **Send to micro:bit**.
 Details: [../../../../docs/setup.md](../../../../docs/setup.md).
 
 ## Erwartetes Verhalten

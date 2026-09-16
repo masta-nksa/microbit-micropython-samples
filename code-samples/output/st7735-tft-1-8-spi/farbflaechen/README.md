@@ -290,7 +290,7 @@ while True:
 1. `st7735.py` als **zweite Datei** anlegen (siehe oben) und den
    Bibliotheks-Code hineinkopieren.
 2. Inhalt von `main.py` in die Hauptdatei kopieren.
-3. <https://python.microbit.org/v/beta> -> **Connect** -> **Send to micro:bit**.
+3. <https://python.microbit.org/v/3> -> **Connect** -> **Send to micro:bit**.
 
 Details: [../../../../docs/setup.md](../../../../docs/setup.md).
 

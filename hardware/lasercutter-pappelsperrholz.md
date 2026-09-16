@@ -38,7 +38,7 @@ fuer diese Box (u. a. Zinken-Testteil: Teile liessen sich sauber herausdruecken)
 
 | Modus | Einsatz | Geschwindigkeit | Leistung | Sonstiges | Status |
 |---|---|---:|---|---|---|
-| **Image** | Fotos, Graustufenbilder | 300 mm/s | Max 12.5 % / Min 10 % | Line Interval 0.12 mm | aus echtem Projekttest, vor Serie auf Reststueck pruefen |
+| **Image** | Fotos, Graustufenbilder | 300 mm/s, 1 Durchgang | Max 12.5 % / Min 10 % | Line Interval 0.1200 mm (= 212 DPI) | aktuelle Einstellung, vor Serie trotzdem auf Reststueck pruefen |
 | **Fill** | Text, Logos, Flaechen | 250 mm/s | Max 15 % / Min 10 % | Line Interval 0.1 mm | **nur Startwert, unbestaetigt** - erst testen |
 | **Line** | Markierungen, Testbeschriftung | 150 mm/s | 12 % | - | **nur Startwert, unbestaetigt** |
 
@@ -46,6 +46,21 @@ Der 100-W-Laser braucht fuer Gravuren **deutlich** weniger Leistung als fuers
 Schneiden - die hohe Maximalleistung der Maschine ist kein Grund, mit hoher
 Leistung zu gravieren. Ist das Ergebnis zu hell: Geschwindigkeit und Leistung
 vorsichtig in kleinen Schritten anpassen, immer erst am Reststueck testen.
+
+### Image-Feineinstellungen (Fotogravur)
+
+Zusaetzlich zu Speed/Power/Interval aus der Tabelle, im **Bild anpassen**-Dialog:
+
+| Einstellung | Wert |
+|---|---|
+| Kontrast | **+10 %** |
+| Dither-Modus | **Stucki** oder **Jarvis** |
+| Min. Leistung | bleibt bei **10.00 %** - nicht mitziehen, wenn Max. Leistung angepasst wird |
+
+Wird die Max. Leistung leicht erhoeht (z. B. von 12.5 % nach oben), wird nur
+das Braun der dunkelsten Dither-Punkte etwas gesaettigter/dunkler - die
+Min. Leistung bleibt davon unberuehrt bei 10.00 %. So lassen sich dunkle
+Bereiche nachjustieren, ohne helle Bereiche zu veraendern.
 
 ---
 
@@ -133,10 +148,13 @@ Gruppieren behaelt einzelne Objekte, Verschweissen macht daraus eine Form.
 
 1. Bild importieren, auf Zielgroesse bringen - **nicht** zu stark vergroessern
    (sonst pixelig/unscharf).
-2. Modus **Image**, Werte aus der Tabelle oben.
-3. Bei Bedarf Helligkeit/Kontrast/Schaerfe anpassen, Vorschau pruefen.
+2. Modus **Image**, Werte aus der Tabelle oben (300 mm/s, Max 12.5 % / Min 10 %,
+   Line Interval 0.1200 mm).
+3. Im **Bild anpassen**-Dialog: Kontrast **+10 %**, Dither-Modus **Stucki**
+   oder **Jarvis** (siehe [Image-Feineinstellungen](#image-feineinstellungen-fotogravur)
+   oben), Vorschau pruefen.
 4. Scharfe, kontrastreiche Bilder ohne unruhigen Hintergrund funktionieren am
-   besten. Fuer Logos/SW-Grafiken meist ein Dither-Modus sinnvoll.
+   besten.
 5. **Line Interval** (Zeilenabstand): zu klein = zu dunkel/unscharf, zu gross
    = sichtbare Luecken. Testbereich ca. 0.08-0.20 mm (120-300 DPI) - fuer
    unser Material siehe Tabelle oben (0.12 mm).

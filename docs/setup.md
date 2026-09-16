@@ -2,7 +2,7 @@
 
 Fuer alle Aufgaben in diesem Repo wird der Online-Editor verwendet:
 
-**<https://python.microbit.org/v/beta>**
+**<https://python.microbit.org/v/3>**
 
 ## Ablauf
 

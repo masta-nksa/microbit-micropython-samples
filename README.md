@@ -17,7 +17,7 @@ Dazu die **Masse der Bauteile fuers CAD** unter [`hardware/`](hardware/)
 ## Editor
 
 Alle Beispiele sind fuer den Online-Editor gedacht:
-**<https://python.microbit.org/v/beta>**
+**<https://python.microbit.org/v/3>**
 
 Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 
