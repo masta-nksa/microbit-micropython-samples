@@ -59,11 +59,12 @@ gewuenschter Sichtbarkeit von LED-Matrix/Tastern auswaehlen (GitHub kann
 - [`cad/microbit-halterung/Microbit_V2_Case.stl`](cad/microbit-halterung/Microbit_V2_Case.stl) -
   Halterung fuer die micro:bit-V2-Platine, wird in die Box eingesetzt
   (auf GitHub direkt als 3D-Modell anschaubar, kein Download noetig).
+  Zum Drucken z. B. in PrusaSlicer oder Cura oeffnen.
 
 ## Schliessmechanismus (3D-Druck, Download)
 
 Zahnstangen-Verschluss zum Auf-/Zuschieben der Box (alle als 3D-Modell direkt
-auf GitHub anschaubar):
+auf GitHub anschaubar, zum Drucken z. B. in PrusaSlicer oder Cura oeffnen):
 
 - [`cad/schliessmechanismus/Bolzen_Zahnstange.stl`](cad/schliessmechanismus/Bolzen_Zahnstange.stl)
 - [`cad/schliessmechanismus/Ritzel.stl`](cad/schliessmechanismus/Ritzel.stl)

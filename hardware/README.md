@@ -19,10 +19,11 @@ Schnitt-/Gravurparameter fuers Serienmaterial und eine LightBurn-Kurzanleitung:
 | `cad/` | fertige Downloads: `ausschnitt.dxf` (Panel-Ausschnitt fuer den Lasercutter) und/oder `halterung.stl` (3D-druckbare Halterung) |
 
 `.stl`-Dateien zeigt GitHub direkt als drehbares 3D-Modell an (Datei im Repo
-anklicken) - kein Download noetig. Fuer `.dxf` gibt es kein natives
-GitHub-Preview - zum Anschauen z. B. in LightBurn oder einem DXF-Viewer
-oeffnen (kein PNG-Vorschaubild im Repo, das wurde zu gross/unhandlich fuers
-README).
+anklicken) - kein Download noetig zum Anschauen. Zum **Drucken** trotzdem
+herunterladen und z. B. in PrusaSlicer oder Cura oeffnen. Fuer `.dxf` gibt es
+kein natives GitHub-Preview - zum Anschauen z. B. in LightBurn oder einem
+DXF-Viewer oeffnen (kein PNG-Vorschaubild im Repo, das wurde zu
+gross/unhandlich fuers README).
 
 `hardware/gehaeuse/<name>/` ist eine Ausnahme vom Bauteil-Schema: hier liegt
 kein einzelnes Bauteil, sondern ein ganzes Gehaeuse (z. B. die micro:bit-Box),

@@ -29,6 +29,7 @@ Maschinenlesbar: [`dimensions.json`](dimensions.json)
   einem DXF-Viewer oeffnen.
 - [`cad/halterung.stl`](cad/halterung.stl) - 3D-druckbare Halterung fuers Modul
   (auf GitHub direkt als 3D-Modell anschaubar, kein Download noetig).
+  Zum Drucken z. B. in PrusaSlicer oder Cura oeffnen.
 
 ## Bilder
 
