@@ -170,3 +170,7 @@ micro_bit/
 - micro:bit **V2** hat einen eingebauten Lautsprecher und ein Mikrofon.
   Toene laufen mit `music.pitch(freq, dauer, pin=None)` ueber den Lautsprecher.
 - Die Pins P0/P1/P2 haben abschaltbare interne Pull-up-/Pull-down-Widerstaende.
+
+---
+
+© 2026 Martin Stangl (masta)
