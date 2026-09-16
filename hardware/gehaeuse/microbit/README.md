@@ -32,30 +32,38 @@ pro Schnitt. Beim eigenen Lasercutter den Kerf am Testmaterial ermitteln und
 bei Abweichung in Fusion neu exportieren statt die DXF von Hand
 nachzuschneiden.
 
-- [`cad/box-pappelsperrholz/BOX_KOMPLETT.dxf`](cad/box-pappelsperrholz/BOX_KOMPLETT.dxf) - alle Teile auf einem Blatt
-- [`cad/box-pappelsperrholz/Boden.dxf`](cad/box-pappelsperrholz/Boden.dxf)
-- [`cad/box-pappelsperrholz/Deckelplatte.dxf`](cad/box-pappelsperrholz/Deckelplatte.dxf)
-- [`cad/box-pappelsperrholz/Eckklotz.dxf`](cad/box-pappelsperrholz/Eckklotz.dxf)
-- [`cad/box-pappelsperrholz/Laengswand.dxf`](cad/box-pappelsperrholz/Laengswand.dxf)
-- [`cad/box-pappelsperrholz/Querwand.dxf`](cad/box-pappelsperrholz/Querwand.dxf)
+![Vorschau BOX_KOMPLETT.dxf](bilder/box-komplett-vorschau.png)
+
+| Datei | Vorschau |
+|-------|----------|
+| [`Boden.dxf`](cad/box-pappelsperrholz/Boden.dxf) | ![Vorschau](bilder/box-boden-vorschau.png) |
+| [`Deckelplatte.dxf`](cad/box-pappelsperrholz/Deckelplatte.dxf) | ![Vorschau](bilder/box-deckelplatte-vorschau.png) |
+| [`Eckklotz.dxf`](cad/box-pappelsperrholz/Eckklotz.dxf) | ![Vorschau](bilder/box-eckklotz-vorschau.png) |
+| [`Laengswand.dxf`](cad/box-pappelsperrholz/Laengswand.dxf) | ![Vorschau](bilder/box-laengswand-vorschau.png) |
+| [`Querwand.dxf`](cad/box-pappelsperrholz/Querwand.dxf) | ![Vorschau](bilder/box-querwand-vorschau.png) |
+| [`BOX_KOMPLETT.dxf`](cad/box-pappelsperrholz/BOX_KOMPLETT.dxf) | alle Teile oben auf einem Blatt |
 
 ## Deckel-Varianten (Download)
 
 Drei Varianten fuer den Deckelausschnitt ueber dem micro:bit - je nach
 gewuenschter Sichtbarkeit von LED-Matrix/Tastern auswaehlen:
 
-- [`cad/deckel-varianten/microbit_mit_Sichtfenster.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster.dxf)
-- [`cad/deckel-varianten/microbit_mit_Sichtfenster_A_B.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster_A_B.dxf) - mit zusaetzlichem Ausschnitt fuer Taster A/B
-- [`cad/deckel-varianten/microbit_ohne_Sichtfenster.dxf`](cad/deckel-varianten/microbit_ohne_Sichtfenster.dxf)
+| Datei | Vorschau |
+|-------|----------|
+| [`microbit_mit_Sichtfenster.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster.dxf) | ![Vorschau](bilder/deckel-mit-sichtfenster-vorschau.png) |
+| [`microbit_mit_Sichtfenster_A_B.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster_A_B.dxf) - mit zusaetzlichem Ausschnitt fuer Taster A/B | ![Vorschau](bilder/deckel-mit-sichtfenster-a-b-vorschau.png) |
+| [`microbit_ohne_Sichtfenster.dxf`](cad/deckel-varianten/microbit_ohne_Sichtfenster.dxf) | ![Vorschau](bilder/deckel-ohne-sichtfenster-vorschau.png) |
 
 ## micro:bit-Halterung (3D-Druck, Download)
 
 - [`cad/microbit-halterung/Microbit_V2_Case.stl`](cad/microbit-halterung/Microbit_V2_Case.stl) -
-  Halterung fuer die micro:bit-V2-Platine, wird in die Box eingesetzt.
+  Halterung fuer die micro:bit-V2-Platine, wird in die Box eingesetzt
+  (auf GitHub direkt als 3D-Modell anschaubar, kein Download noetig).
 
 ## Schliessmechanismus (3D-Druck, Download)
 
-Zahnstangen-Verschluss zum Auf-/Zuschieben der Box:
+Zahnstangen-Verschluss zum Auf-/Zuschieben der Box (alle als 3D-Modell direkt
+auf GitHub anschaubar):
 
 - [`cad/schliessmechanismus/Bolzen_Zahnstange.stl`](cad/schliessmechanismus/Bolzen_Zahnstange.stl)
 - [`cad/schliessmechanismus/Ritzel.stl`](cad/schliessmechanismus/Ritzel.stl)

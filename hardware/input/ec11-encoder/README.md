@@ -31,6 +31,8 @@ Maschinenlesbar: [`dimensions.json`](dimensions.json)
 - [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Panel-Ausschnitt fuer den Lasercutter
   (Pappelsperrholz), passend zum obigen Rundloch + Verdrehschutz-Stift.
 
+  ![Vorschau ausschnitt.dxf](bilder/ausschnitt-vorschau.png)
+
 ## Anschluss am micro:bit (Vorschau)
 
 - Encoder-Pins A/B an zwei GPIOs (z. B. `P0`, `P1`), Mittelpin an `GND`

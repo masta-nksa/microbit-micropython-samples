@@ -15,6 +15,11 @@ Gehaeuse im CAD (z. B. Fusion) erzeugt werden koennen.
 | `bilder/` | Fotos, Datenblatt-Ausschnitte, CAD-Screenshots |
 | `cad/` | fertige Downloads: `ausschnitt.dxf` (Panel-Ausschnitt fuer den Lasercutter) und/oder `halterung.stl` (3D-druckbare Halterung) |
 
+`.stl`-Dateien zeigt GitHub direkt als drehbares 3D-Modell an (Datei im Repo
+anklicken) - kein Download noetig. Fuer `.dxf` gibt es kein natives
+GitHub-Preview, deshalb liegt zu jeder `cad/*.dxf` ein `bilder/*-vorschau.png`
+(Draufsicht, per `ezdxf` gerendert), das in der README eingebunden wird.
+
 `hardware/gehaeuse/<name>/` ist eine Ausnahme vom Bauteil-Schema: hier liegt
 kein einzelnes Bauteil, sondern ein ganzes Gehaeuse (z. B. die micro:bit-Box),
 das mehrere der obigen Bauteile aufnimmt. Struktur innerhalb von `cad/` ist

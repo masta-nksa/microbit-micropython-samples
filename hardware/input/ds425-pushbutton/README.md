@@ -44,6 +44,8 @@ Maschinenlesbar: [`dimensions.json`](dimensions.json)
 - [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Panel-Ausschnitt fuer den Lasercutter
   (Pappelsperrholz), passend zum obigen Rundloch D 4.0 mm.
 
+  ![Vorschau ausschnitt.dxf](bilder/ausschnitt-vorschau.png)
+
 ## Bilder
 
 Datenblatt-Ausschnitte, Messfotos und CAD-Screenshots in [`bilder/`](bilder/).
