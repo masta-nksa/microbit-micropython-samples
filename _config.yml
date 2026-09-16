@@ -8,10 +8,11 @@ baseurl: "/microbit-micropython-samples"
 theme: minima
 minima:
   skin: auto
-  header_pages:
-    - code-samples/README.md
-    - hardware/README.md
-    - docs/setup.md
+
+header_pages:
+  - code-samples/README.md
+  - hardware/README.md
+  - docs/setup.md
 
 markdown: kramdown
 kramdown:
@@ -26,6 +27,10 @@ plugins:
   - jekyll-default-layout
   - jekyll-seo-tag
   - jekyll-sitemap
+
+jekyll-titles-from-headings:
+  enabled: true
+  strip_title: true
 
 relative_links:
   enabled: true
