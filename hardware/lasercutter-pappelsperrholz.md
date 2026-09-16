@@ -34,6 +34,8 @@ kurzen Testschnitt mit den Werten unten machen, nicht blind uebernehmen.
 **Status: verifiziert.** Cross-bestaetigt in mehreren realen LightBurn-Projekten
 fuer diese Box (u. a. Zinken-Testteil: Teile liessen sich sauber herausdruecken).
 
+![Schema: Cuts/Layers-Dialog mit den Cut-Werten](lightburn-cutsettings-schneiden.svg)
+
 ## Gravur-Ebenen
 
 | Modus | Einsatz | Geschwindigkeit | Leistung | Sonstiges | Status |
@@ -61,6 +63,8 @@ Wird die Max. Leistung leicht erhoeht (z. B. von 12.5 % nach oben), wird nur
 das Braun der dunkelsten Dither-Punkte etwas gesaettigter/dunkler - die
 Min. Leistung bleibt davon unberuehrt bei 10.00 %. So lassen sich dunkle
 Bereiche nachjustieren, ohne helle Bereiche zu veraendern.
+
+![Schema: Cuts/Layers-Dialog mit den Bildgravur-Werten](lightburn-cutsettings-bildgravur.svg)
 
 ---
 
