@@ -165,6 +165,20 @@ micro_bit/
    Marker ein. Nach jeder Aenderung an `main.py` erneut laufen lassen;
    `python tools/build_readme.py --check` meldet veraltete READMEs.
 
+## Website (GitHub Pages)
+
+Dieses Repo laesst sich unveraendert als Website veroeffentlichen: die
+`_config.yml` im Root aktiviert Jekyll (Theme `minima`) mit den GitHub-Pages-
+eigenen Plugins `jekyll-readme-index` und `jekyll-relative-links` - jede
+`README.md` wird automatisch zur passenden Seite, bestehende relative Links
+zwischen den Ordnern funktionieren dabei unveraendert weiter.
+
+Einmalig aktivieren: **Settings -> Pages -> Source: Deploy from a branch ->
+Branch `main` / `(root)`**. Danach ist die Seite unter
+`https://masta-nksa.github.io/microbit-micropython-samples/` erreichbar und
+aktualisiert sich bei jedem Push automatisch. Lokale Vorschau:
+`bundle exec jekyll serve`.
+
 ## Hinweise
 
 - micro:bit **V2** hat einen eingebauten Lautsprecher und ein Mikrofon.

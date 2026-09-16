@@ -1,0 +1,42 @@
+title: "micro:bit MicroPython Samples"
+description: >-
+  Kommentierte MicroPython-Beispiele fuer den BBC micro:bit V2.2 -
+  Impulswoche an der Neuen Kantonsschule Aarau.
+url: "https://masta-nksa.github.io"
+baseurl: "/microbit-micropython-samples"
+
+theme: minima
+minima:
+  skin: auto
+  header_pages:
+    - code-samples/README.md
+    - hardware/README.md
+    - docs/setup.md
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+relative_links:
+  enabled: true
+  collections: false
+
+readme_index:
+  with_frontmatter: true
+
+exclude:
+  - tools/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - "*.hex"

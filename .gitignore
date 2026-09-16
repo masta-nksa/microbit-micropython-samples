@@ -12,3 +12,10 @@ Thumbs.db
 # Editoren
 .vscode/
 .idea/
+
+# Jekyll / GitHub Pages (lokale Vorschau)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
