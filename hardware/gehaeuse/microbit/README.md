@@ -34,28 +34,25 @@ nachzuschneiden.
 
 Schnitt-/Gravur-Layer-Werte fuer 6 mm Pappelsperrholz (Speed, Power, Fokus,
 LightBurn-Kurzanleitung): [../../lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
+GitHub kann `.dxf` nicht anzeigen - zum Anschauen z. B. in LightBurn oder
+einem DXF-Viewer oeffnen.
 
-![Vorschau BOX_KOMPLETT.dxf](bilder/box-komplett-vorschau.png)
-
-| Datei | Vorschau |
-|-------|----------|
-| [`Boden.dxf`](cad/box-pappelsperrholz/Boden.dxf) | ![Vorschau](bilder/box-boden-vorschau.png) |
-| [`Deckelplatte.dxf`](cad/box-pappelsperrholz/Deckelplatte.dxf) | ![Vorschau](bilder/box-deckelplatte-vorschau.png) |
-| [`Eckklotz.dxf`](cad/box-pappelsperrholz/Eckklotz.dxf) | ![Vorschau](bilder/box-eckklotz-vorschau.png) |
-| [`Laengswand.dxf`](cad/box-pappelsperrholz/Laengswand.dxf) | ![Vorschau](bilder/box-laengswand-vorschau.png) |
-| [`Querwand.dxf`](cad/box-pappelsperrholz/Querwand.dxf) | ![Vorschau](bilder/box-querwand-vorschau.png) |
-| [`BOX_KOMPLETT.dxf`](cad/box-pappelsperrholz/BOX_KOMPLETT.dxf) | alle Teile oben auf einem Blatt |
+- [`cad/box-pappelsperrholz/BOX_KOMPLETT.dxf`](cad/box-pappelsperrholz/BOX_KOMPLETT.dxf) - alle Teile auf einem Blatt
+- [`cad/box-pappelsperrholz/Boden.dxf`](cad/box-pappelsperrholz/Boden.dxf)
+- [`cad/box-pappelsperrholz/Deckelplatte.dxf`](cad/box-pappelsperrholz/Deckelplatte.dxf)
+- [`cad/box-pappelsperrholz/Eckklotz.dxf`](cad/box-pappelsperrholz/Eckklotz.dxf)
+- [`cad/box-pappelsperrholz/Laengswand.dxf`](cad/box-pappelsperrholz/Laengswand.dxf)
+- [`cad/box-pappelsperrholz/Querwand.dxf`](cad/box-pappelsperrholz/Querwand.dxf)
 
 ## Deckel-Varianten (Download)
 
 Drei Varianten fuer den Deckelausschnitt ueber dem micro:bit - je nach
-gewuenschter Sichtbarkeit von LED-Matrix/Tastern auswaehlen:
+gewuenschter Sichtbarkeit von LED-Matrix/Tastern auswaehlen (GitHub kann
+`.dxf` nicht anzeigen - z. B. in LightBurn oeffnen):
 
-| Datei | Vorschau |
-|-------|----------|
-| [`microbit_mit_Sichtfenster.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster.dxf) | ![Vorschau](bilder/deckel-mit-sichtfenster-vorschau.png) |
-| [`microbit_mit_Sichtfenster_A_B.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster_A_B.dxf) - mit zusaetzlichem Ausschnitt fuer Taster A/B | ![Vorschau](bilder/deckel-mit-sichtfenster-a-b-vorschau.png) |
-| [`microbit_ohne_Sichtfenster.dxf`](cad/deckel-varianten/microbit_ohne_Sichtfenster.dxf) | ![Vorschau](bilder/deckel-ohne-sichtfenster-vorschau.png) |
+- [`cad/deckel-varianten/microbit_mit_Sichtfenster.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster.dxf)
+- [`cad/deckel-varianten/microbit_mit_Sichtfenster_A_B.dxf`](cad/deckel-varianten/microbit_mit_Sichtfenster_A_B.dxf) - mit zusaetzlichem Ausschnitt fuer Taster A/B
+- [`cad/deckel-varianten/microbit_ohne_Sichtfenster.dxf`](cad/deckel-varianten/microbit_ohne_Sichtfenster.dxf)
 
 ## micro:bit-Halterung (3D-Druck, Download)
 

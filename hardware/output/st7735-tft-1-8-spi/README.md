@@ -26,10 +26,10 @@ Maschinenlesbar: [`dimensions.json`](dimensions.json)
 
 - [`cad/ausschnitt.dxf`](cad/ausschnitt.dxf) - Sichtfenster-Ausschnitt fuer den Lasercutter
   (Pappelsperrholz). Schnittparameter: [lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
+  GitHub kann `.dxf` nicht anzeigen - zum Anschauen z. B. in LightBurn oder
+  einem DXF-Viewer oeffnen.
 - [`cad/halterung.stl`](cad/halterung.stl) - 3D-druckbare Halterung fuers Modul
   (auf GitHub direkt als 3D-Modell anschaubar, kein Download noetig).
-
-  ![Vorschau ausschnitt.dxf](bilder/ausschnitt-vorschau.png)
 
 ## Bilder
 

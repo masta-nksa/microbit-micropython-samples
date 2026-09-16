@@ -38,7 +38,7 @@ fuer diese Box (u. a. Zinken-Testteil: Teile liessen sich sauber herausdruecken)
 
 | Modus | Einsatz | Geschwindigkeit | Leistung | Sonstiges | Status |
 |---|---|---:|---|---|---|
-| **Image** | Fotos, Graustufenbilder | 300 mm/s, 1 Durchgang | Max 12.5 % / Min 10 % | Line Interval 0.1200 mm (= 212 DPI) | aktuelle Einstellung, vor Serie trotzdem auf Reststueck pruefen |
+| **Image** | Fotos, Graustufenbilder | 300 mm/s, 1 Durchgang | Max 12.5 % / Min 10 % | Line Interval 0.1200 mm (= 212 DPI) | **ausprobiert, funktioniert** |
 | **Fill** | Text, Logos, Flaechen | 250 mm/s | Max 15 % / Min 10 % | Line Interval 0.1 mm | **nur Startwert, unbestaetigt** - erst testen |
 | **Line** | Markierungen, Testbeschriftung | 150 mm/s | 12 % | - | **nur Startwert, unbestaetigt** |
 

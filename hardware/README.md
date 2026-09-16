@@ -20,8 +20,9 @@ Schnitt-/Gravurparameter fuers Serienmaterial und eine LightBurn-Kurzanleitung:
 
 `.stl`-Dateien zeigt GitHub direkt als drehbares 3D-Modell an (Datei im Repo
 anklicken) - kein Download noetig. Fuer `.dxf` gibt es kein natives
-GitHub-Preview, deshalb liegt zu jeder `cad/*.dxf` ein `bilder/*-vorschau.png`
-(Draufsicht, per `ezdxf` gerendert), das in der README eingebunden wird.
+GitHub-Preview - zum Anschauen z. B. in LightBurn oder einem DXF-Viewer
+oeffnen (kein PNG-Vorschaubild im Repo, das wurde zu gross/unhandlich fuers
+README).
 
 `hardware/gehaeuse/<name>/` ist eine Ausnahme vom Bauteil-Schema: hier liegt
 kein einzelnes Bauteil, sondern ein ganzes Gehaeuse (z. B. die micro:bit-Box),
