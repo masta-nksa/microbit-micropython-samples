@@ -1,3 +1,7 @@
+---
+title: Code-Samples
+---
+
 # Code-Samples
 
 Aufbau: `kategorie / bauteil / sample`

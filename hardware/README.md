@@ -1,3 +1,7 @@
+---
+title: Hardware
+---
+
 # Hardware-Masse fuer CAD
 
 Masse ausgewaehlter Bauteile, damit daraus Panel-Ausschnitte, Halterungen und

@@ -1,3 +1,7 @@
+---
+title: Setup
+---
+
 # Setup: MicroPython auf den micro:bit V2.2 uebertragen
 
 Fuer alle Aufgaben in diesem Repo wird der Online-Editor verwendet:
