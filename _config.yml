@@ -30,7 +30,6 @@ plugins:
 
 jekyll-titles-from-headings:
   enabled: true
-  strip_title: true
 
 relative_links:
   enabled: true
