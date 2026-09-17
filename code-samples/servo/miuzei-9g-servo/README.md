@@ -11,6 +11,9 @@ Stellbereich ca. 0..180 Grad. 3-poliges Kabel:
 
 ## Ansteuerung
 
+Was ein PWM-Signal allgemein ist (einfach erklaert):
+[Theorie: Servo/PWM](../../../docs/theorie.md#servo).
+
 Ein Servo wird ueber ein **PWM-Signal** gestellt: alle 20 ms ein Impuls,
 dessen **Laenge** den Winkel bestimmt.
 

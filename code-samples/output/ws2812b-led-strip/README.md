@@ -4,6 +4,9 @@ Adressierbarer RGB-LED-Streifen: jede LED (Chip **WS2812B**, Bauform 5050) hat
 einen eigenen Controller und wird ueber **eine einzige Datenleitung** gesetzt.
 Laut Beipackzettel: **DC 5 V**, ueber 5,5 V brennen die LEDs durch.
 
+*Wie das Signal dabei von LED zu LED weitergereicht wird (einfach erklaert):
+[Theorie: WS2812B](../../../docs/theorie.md#ws2812b).*
+
 ## Anschluesse am Strip
 
 Der Strip hat **drei** Kontakte, an beiden Enden herausgefuehrt:

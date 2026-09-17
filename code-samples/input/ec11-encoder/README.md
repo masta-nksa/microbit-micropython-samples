@@ -44,6 +44,9 @@ Der Encoder-GND (Mittelpin) und die Taster-Pins sind davon nicht betroffen.
 
 ## So liest der Code den Drehgeber
 
+Warum zwei versetzte Signale ueberhaupt die Drehrichtung verraten (einfach
+erklaert): [Theorie: EC11-Drehgeber](../../../docs/theorie.md#ec11).
+
 Kein Interrupt - der micro:bit fragt die Pins in einer schnellen Schleife ab
 (`sleep(1)`). Bei einer **fallenden Flanke an CLK** (eine Raste) sagt der
 Zustand von DT die Richtung:

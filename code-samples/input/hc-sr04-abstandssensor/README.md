@@ -58,6 +58,9 @@ micro:bit-Pin.
 micro:bit), `Trig` bleibt direkt am micro:bit - der Sensor erkennt den
 3,3-V-Trigger auch im 5-V-Betrieb zuverlaessig.
 
+Warum eine Zeitmessung ueberhaupt den Abstand verraet (einfach erklaert):
+[Theorie: HC-SR04](../../../docs/theorie.md#hc-sr04).
+
 ## Messung in MicroPython
 
 ```python

@@ -48,6 +48,9 @@ Position der Pins.
 - Faellt das Bild aus/bleibt weiss: zuerst `RESET` und `CS` pruefen, danach
   `A0/DC` (vertauschtes Data/Command fuehrt zu Datenmuell auf dem Screen).
 
+Was SPI von einem bit-gebangten Protokoll wie TM1637 unterscheidet (einfach
+erklaert): [Theorie: SPI](../../../docs/theorie.md#spi).
+
 ## Bibliothek: eigene Portierung `st7735.py`
 
 Fuer den ST7735 gibt es keine fertige micro:bit-native Bibliothek wie

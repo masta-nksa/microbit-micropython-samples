@@ -80,6 +80,9 @@ tm.brightness(5)             # Helligkeit nachtraeglich aendern
 
 ## Das Protokoll (Hintergrund)
 
+Einfacher erklaert, was CLK/DATA allgemein bedeuten und wie sich das vom
+WS2812B-Protokoll unterscheidet: [Theorie: TM1637](../../../docs/theorie.md#tm1637).
+
 TM1637 spricht ein I2C-aehnliches, aber eigenes Protokoll: **Start** = DIO
 faellt, waehrend CLK hoch ist. **Stop** = DIO steigt, waehrend CLK hoch ist.
 Dazwischen werden Bytes LSB-zuerst getaktet, adressiert per Befehlsbyte
