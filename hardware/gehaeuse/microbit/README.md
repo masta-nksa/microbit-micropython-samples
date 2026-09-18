@@ -32,8 +32,9 @@ pro Schnitt. Beim eigenen Lasercutter den Kerf am Testmaterial ermitteln und
 bei Abweichung in Fusion neu exportieren statt die DXF von Hand
 nachzuschneiden.
 
-Schnitt-/Gravur-Layer-Werte fuer 6 mm Pappelsperrholz (Speed, Power, Fokus,
-LightBurn-Kurzanleitung): [../../lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
+Schnitt-/Gravur-Layer-Werte fuer 6 mm Pappelsperrholz (Speed, Power, Fokus):
+[../../lasercutter-pappelsperrholz.md](../../lasercutter-pappelsperrholz.md).
+LightBurn-Bedienung und alle Ausschnitt-Dateien: [../../lightburn.md](../../lightburn.md).
 GitHub kann `.dxf` nicht anzeigen - zum Anschauen z. B. in LightBurn oder
 einem DXF-Viewer oeffnen.
 

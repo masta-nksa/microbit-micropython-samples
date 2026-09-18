@@ -7,8 +7,9 @@ title: Hardware
 Masse ausgewaehlter Bauteile, damit daraus Panel-Ausschnitte, Halterungen und
 Gehaeuse im CAD (z. B. Fusion) erzeugt werden koennen.
 
-Schnitt-/Gravurparameter fuers Serienmaterial und eine LightBurn-Kurzanleitung:
-[lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md).
+Schnitt-/Gravurparameter fuers Serienmaterial: [lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md).
+LightBurn-Bedienung und Tabelle **aller** Ausschnitt-/Halterungs-Dateien:
+[lightburn.md](lightburn.md).
 Temperatur-Richtwerte und Technik fuers Loeten von Pinheadern/Kabeln:
 [loeten.md](loeten.md).
 
