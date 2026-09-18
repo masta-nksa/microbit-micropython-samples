@@ -15,10 +15,8 @@ Die Masse jedes Bauteils fuers CAD liegen unter demselben Pfad in
 
 ## Aufbau einer Sample-README
 
-<details>
+<details markdown="1">
 <summary>Konventionen anzeigen</summary>
-
-<div markdown="1">
 
 Jede Sample-`README.md` ist eine abgeschlossene Seite und hat immer dieselben
 Abschnitte in dieser Reihenfolge:
@@ -80,7 +78,6 @@ getestet", "ein Wert noch nicht kalibriert"). Kein eigener Abschnitt, keine
 Tabelle - nur ehrlich festhalten, was tatsaechlich schon lief. Beispiele:
 [tm1637-4digit](output/tm1637-4digit/README.md), [hc-sr04-abstandssensor](input/hc-sr04-abstandssensor/README.md).
 
-</div>
 </details>
 
 ## Kategorien

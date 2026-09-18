@@ -32,10 +32,8 @@ Kabel, Bit fuer Bit. Dabei gibt es zwei Grundvarianten:
 Die folgenden Abschnitte zeigen, wie das konkret bei den einzelnen Bauteilen
 aussieht.
 
-<details>
+<details markdown="1">
 <summary><strong>WS2812B LED-Strip</strong> - ein Draht fuer beliebig viele LEDs</summary>
-
-<div markdown="1">
 
 ## WS2812B LED-Strip: ein Draht fuer beliebig viele LEDs {#ws2812b}
 
@@ -63,13 +61,10 @@ Nanosekunden bis wenigen Mikrosekunden). Das Modul `neopixel` im micro:bit
 erzeugt dieses Timing exakt - im eigenen Code muss man sich darum nicht
 kuemmern, nur `np.show()` aufrufen.
 
-</div>
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>TM1637</strong> - CLK + DATA, ein getaktetes 2-Draht-Protokoll</summary>
-
-<div markdown="1">
 
 ## TM1637: CLK + DATA - ein getaktetes 2-Draht-Protokoll {#tm1637}
 
@@ -85,13 +80,10 @@ programmieren (bit-gebanged) als das timing-kritische WS2812B-Protokoll.
 Befehle und Ziffern, der Chip meldet darauf (bei diesem Modul ungenutzt) auch
 eine Bestaetigung zurueck.
 
-</div>
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>EC11-Drehgeber</strong> - zwei versetzte Signale zeigen die Richtung</summary>
-
-<div markdown="1">
 
 ## EC11-Drehgeber: zwei versetzte Signale zeigen die Richtung {#ec11}
 
@@ -109,13 +101,10 @@ Verzoegerung zwischen den beiden Signalen verraet die Drehrichtung:
 Der Code muss darum nur pruefen, *welches der beiden Signale zuerst kippt*,
 wenn eine Raste erreicht wird - daraus ergibt sich hoch- oder runterzaehlen.
 
-</div>
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>HC-SR04</strong> - Abstand per Echo-Laufzeit</summary>
-
-<div markdown="1">
 
 ## HC-SR04: Abstand per Echo-Laufzeit {#hc-sr04}
 
@@ -131,13 +120,10 @@ Schallgeschwindigkeit bekannt ist (~343 m/s bei Zimmertemperatur), laesst
 sich daraus direkt der Abstand berechnen - genau das macht `dauer_us / 58.0`
 in der README.
 
-</div>
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Servo</strong> - PWM, die Pulslaenge bestimmt den Winkel</summary>
-
-<div markdown="1">
 
 ## Servo: PWM - die Pulslaenge bestimmt den Winkel {#servo}
 
@@ -151,13 +137,10 @@ Impuls dauert - ca. 0.5 ms bedeutet fuer den Servo "fahre auf 0 Grad", ca.
 eigene kleine Elektronik, die diese Pulslaenge staendig misst und den Motor
 so lange nachregelt, bis die Achse den passenden Winkel erreicht hat.
 
-</div>
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>SPI</strong> (ST7735-Display) - getaktet wie TM1637, aber schneller und mit Adressierung</summary>
-
-<div markdown="1">
 
 ## SPI (ST7735-Display): getaktet wie TM1637, aber schneller und mit Adressierung {#spi}
 
@@ -180,5 +163,4 @@ Die zusaetzliche Leitung `A0`/`DC` sagt dem Display, ob die naechsten Bytes
 ein **Befehl** (z. B. "Bildschirm loeschen") oder **Bilddaten** (Pixelfarben)
 sind.
 
-</div>
 </details>

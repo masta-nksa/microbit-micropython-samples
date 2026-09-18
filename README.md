@@ -23,10 +23,8 @@ Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 
 ## Repo-Struktur
 
-<details>
+<details markdown="1">
 <summary>Ordnerstruktur anzeigen</summary>
-
-<div markdown="1">
 
 ```
 micro_bit/
@@ -92,7 +90,6 @@ micro_bit/
         └── tm1637-4digit/
 ```
 
-</div>
 </details>
 
 ## Samples
@@ -154,10 +151,8 @@ micro_bit/
 
 ## Neues Sample hinzufuegen
 
-<details>
+<details markdown="1">
 <summary>Anleitung anzeigen</summary>
-
-<div markdown="1">
 
 1. Ordner `code-samples/<kategorie>/<bauteil>/<sample>/` anlegen mit `main.py`
    und `README.md`. Bei externen Bauteilen zusaetzlich `wiring/`.
@@ -178,15 +173,12 @@ micro_bit/
    Marker ein. Nach jeder Aenderung an `main.py` erneut laufen lassen;
    `python tools/build_readme.py --check` meldet veraltete READMEs.
 
-</div>
 </details>
 
 ## Website (GitHub Pages)
 
-<details>
+<details markdown="1">
 <summary>Details anzeigen</summary>
-
-<div markdown="1">
 
 Dieses Repo laesst sich unveraendert als Website veroeffentlichen: die
 `_config.yml` im Root aktiviert Jekyll (Theme `minima`) mit den GitHub-Pages-
@@ -200,7 +192,6 @@ Branch `main` / `(root)`**. Danach ist die Seite unter
 aktualisiert sich bei jedem Push automatisch. Lokale Vorschau:
 `bundle exec jekyll serve`.
 
-</div>
 </details>
 
 ## Hinweise
