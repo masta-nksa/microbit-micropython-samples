@@ -26,8 +26,8 @@ Kabel, Bit fuer Bit. Dabei gibt es zwei Grundvarianten:
 - **Ohne Taktleitung, nur ueber Timing:** Es gibt nur die Datenleitung. Ob ein
   Bit eine 0 oder eine 1 ist, erkennt der Empfaenger daran, **wie lange** die
   Leitung high bzw. low bleibt - beide Seiten muessen exakt dasselbe Timing
-  kennen. Ein Kabel weniger, dafuer unempfindlicher gegen Verzoegerungen
-  waere es nicht. Beispiel: **WS2812B**.
+  kennen. Ein Kabel weniger, dafuer aber empfindlicher gegen Verzoegerungen
+  (z. B. durch die Leitungsqualitaet). Beispiel: **WS2812B**.
 
 Die folgenden Abschnitte zeigen, wie das konkret bei den einzelnen Bauteilen
 aussieht.

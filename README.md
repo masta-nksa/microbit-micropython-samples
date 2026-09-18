@@ -14,6 +14,29 @@ Jedes Sample ist eine in sich abgeschlossene Seite (`README.md`) mit:
 Dazu die **Masse der Bauteile fuers CAD** unter [`hardware/`](hardware/)
 (Panel-Ausschnitte fuer Taster, Displays usw.).
 
+<div class="cat-grid">
+  <a class="cat-card" href="code-samples/onboard/">
+    <div class="cat-dot" style="background:#8A897F;"></div>
+    <strong>onboard</strong>
+    <div class="cat-desc">eingebaut, kein Aufbau noetig</div>
+  </a>
+  <a class="cat-card" href="code-samples/input/">
+    <div class="cat-dot" style="background:#0E7C7B;"></div>
+    <strong>input</strong>
+    <div class="cat-desc">Taster, Encoder, Sensor</div>
+  </a>
+  <a class="cat-card" href="code-samples/output/">
+    <div class="cat-dot" style="background:#B5651D;"></div>
+    <strong>output</strong>
+    <div class="cat-desc">LED-Strip, Displays</div>
+  </a>
+  <a class="cat-card" href="code-samples/servo/">
+    <div class="cat-dot" style="background:#6E4A9E;"></div>
+    <strong>servo</strong>
+    <div class="cat-desc">Servomotoren</div>
+  </a>
+</div>
+
 ## Editor
 
 Alle Beispiele sind fuer den Online-Editor gedacht:

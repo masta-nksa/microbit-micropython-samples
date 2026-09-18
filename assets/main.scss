@@ -1,0 +1,152 @@
+---
+---
+@charset "utf-8";
+
+// Palette - ueberschreibt minima-Variablen VOR dem Import
+$text-color:       #1C1C1A;
+$background-color: #FAFAF8;
+$brand-color:      #0E7C7B;
+$grey-color:       #7A7A70;
+$grey-color-light: #E4E1D8;
+$grey-color-dark:  #4A4A44;
+
+$content-width:    860px;
+
+@import "minima";
+
+// --- Eigene Anpassungen ---
+
+$accent-dark: #0A5F5E;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: $brand-color;
+}
+a:visited {
+  color: $accent-dark;
+}
+a:hover {
+  color: $accent-dark;
+}
+
+.site-header {
+  border-top: 4px solid $brand-color;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.site-title,
+.site-title:visited {
+  font-weight: 600;
+}
+
+.site-nav .page-link {
+  font-weight: 500;
+}
+
+code {
+  border-color: $grey-color-light;
+}
+
+.highlighter-rouge .highlight {
+  background: #F5F4EF;
+}
+
+table {
+  border-color: $grey-color-light;
+}
+table th {
+  background-color: #F5F4EF;
+  border-color: $grey-color-light;
+}
+table td {
+  border-color: #EDEBE3;
+}
+table tr:nth-child(even) {
+  background-color: #FBFBF9;
+}
+
+// Aufklappbare Bereiche: Chevron statt Standard-Dreieck
+details {
+  border: 1px solid $grey-color-light;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: $spacing-unit;
+  background: #fff;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-right: 2px solid $grey-color;
+  border-bottom: 2px solid $grey-color;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+details[open] summary {
+  margin-bottom: 12px;
+}
+
+details[open] summary::before {
+  transform: rotate(45deg);
+}
+
+details > :last-child {
+  margin-bottom: 0;
+}
+
+// Kategorie-Karten (Startseite)
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: $spacing-unit 0;
+}
+
+.cat-card {
+  display: block;
+  border: 1px solid $grey-color-light;
+  border-radius: 8px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.cat-card:hover {
+  border-color: $brand-color;
+  text-decoration: none;
+}
+
+.cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.cat-card strong {
+  font-size: 14px;
+}
+
+.cat-desc {
+  font-size: 12.5px;
+  color: $grey-color;
+  margin-top: 4px;
+}
