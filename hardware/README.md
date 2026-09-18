@@ -49,8 +49,10 @@ dort frei (Unterordner je Baugruppe), Rest analog.
 
 ## `dimensions.json` - Schema
 
-<details markdown="1">
+<details>
 <summary>Schema anzeigen</summary>
+
+<div markdown="1">
 
 ```json
 {
@@ -76,6 +78,7 @@ Nicht zutreffende Felder weglassen. Ein CAD-Skript liest immer
 die Downloads in `cad/` (siehe oben), z. B.
 `{ "ausschnitt": "cad/ausschnitt.dxf", "halterung": "cad/halterung.stl" }`.
 
+</div>
 </details>
 
 ## Bauteile
