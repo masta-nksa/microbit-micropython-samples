@@ -15,7 +15,7 @@ Die Masse jedes Bauteils fuers CAD liegen unter demselben Pfad in
 
 ## Aufbau einer Sample-README
 
-<details>
+<details markdown="1">
 <summary>Konventionen anzeigen</summary>
 
 Jede Sample-`README.md` ist eine abgeschlossene Seite und hat immer dieselben

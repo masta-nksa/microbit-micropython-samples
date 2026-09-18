@@ -23,7 +23,7 @@ Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 
 ## Repo-Struktur
 
-<details>
+<details markdown="1">
 <summary>Ordnerstruktur anzeigen</summary>
 
 ```
@@ -151,7 +151,7 @@ micro_bit/
 
 ## Neues Sample hinzufuegen
 
-<details>
+<details markdown="1">
 <summary>Anleitung anzeigen</summary>
 
 1. Ordner `code-samples/<kategorie>/<bauteil>/<sample>/` anlegen mit `main.py`
@@ -177,7 +177,7 @@ micro_bit/
 
 ## Website (GitHub Pages)
 
-<details>
+<details markdown="1">
 <summary>Details anzeigen</summary>
 
 Dieses Repo laesst sich unveraendert als Website veroeffentlichen: die

@@ -49,7 +49,7 @@ dort frei (Unterordner je Baugruppe), Rest analog.
 
 ## `dimensions.json` - Schema
 
-<details>
+<details markdown="1">
 <summary>Schema anzeigen</summary>
 
 ```json

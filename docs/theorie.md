@@ -32,7 +32,7 @@ Kabel, Bit fuer Bit. Dabei gibt es zwei Grundvarianten:
 Die folgenden Abschnitte zeigen, wie das konkret bei den einzelnen Bauteilen
 aussieht.
 
-<details>
+<details markdown="1">
 <summary><strong>WS2812B LED-Strip</strong> - ein Draht fuer beliebig viele LEDs</summary>
 
 ## WS2812B LED-Strip: ein Draht fuer beliebig viele LEDs {#ws2812b}
@@ -63,7 +63,7 @@ kuemmern, nur `np.show()` aufrufen.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>TM1637</strong> - CLK + DATA, ein getaktetes 2-Draht-Protokoll</summary>
 
 ## TM1637: CLK + DATA - ein getaktetes 2-Draht-Protokoll {#tm1637}
@@ -82,7 +82,7 @@ eine Bestaetigung zurueck.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>EC11-Drehgeber</strong> - zwei versetzte Signale zeigen die Richtung</summary>
 
 ## EC11-Drehgeber: zwei versetzte Signale zeigen die Richtung {#ec11}
@@ -103,7 +103,7 @@ wenn eine Raste erreicht wird - daraus ergibt sich hoch- oder runterzaehlen.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>HC-SR04</strong> - Abstand per Echo-Laufzeit</summary>
 
 ## HC-SR04: Abstand per Echo-Laufzeit {#hc-sr04}
@@ -122,7 +122,7 @@ in der README.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Servo</strong> - PWM, die Pulslaenge bestimmt den Winkel</summary>
 
 ## Servo: PWM - die Pulslaenge bestimmt den Winkel {#servo}
@@ -139,7 +139,7 @@ so lange nachregelt, bis die Achse den passenden Winkel erreicht hat.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>SPI</strong> (ST7735-Display) - getaktet wie TM1637, aber schneller und mit Adressierung</summary>
 
 ## SPI (ST7735-Display): getaktet wie TM1637, aber schneller und mit Adressierung {#spi}
