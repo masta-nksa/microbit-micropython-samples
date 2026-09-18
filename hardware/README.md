@@ -48,6 +48,9 @@ dort frei (Unterordner je Baugruppe), Rest analog.
 
 ## `dimensions.json` - Schema
 
+<details>
+<summary>Schema anzeigen</summary>
+
 ```json
 {
   "part": "Klartext-Name",
@@ -71,6 +74,8 @@ Nicht zutreffende Felder weglassen. Ein CAD-Skript liest immer
 `hardware/<kat>/<bauteil>/dimensions.json`. Optional: `cad_files` verweist auf
 die Downloads in `cad/` (siehe oben), z. B.
 `{ "ausschnitt": "cad/ausschnitt.dxf", "halterung": "cad/halterung.stl" }`.
+
+</details>
 
 ## Bauteile
 

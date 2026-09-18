@@ -8,6 +8,7 @@ Kurze, einfach gehaltene Erklaerungen, **wie** die externen Bauteile mit dem
 micro:bit kommunizieren - fuer alle, die mehr wissen wollen als "so wird's
 angeschlossen, dann laeuft's". Zum Nachschlagen gedacht, **keine
 Voraussetzung** zum Loslegen: jedes Sample funktioniert auch ohne diese Seite.
+Jeder Abschnitt unten laesst sich einzeln aufklappen.
 
 ## Warum ueberhaupt verschiedene Protokolle? {#warum-protokolle}
 
@@ -30,6 +31,9 @@ Kabel, Bit fuer Bit. Dabei gibt es zwei Grundvarianten:
 
 Die folgenden Abschnitte zeigen, wie das konkret bei den einzelnen Bauteilen
 aussieht.
+
+<details>
+<summary><strong>WS2812B LED-Strip</strong> - ein Draht fuer beliebig viele LEDs</summary>
 
 ## WS2812B LED-Strip: ein Draht fuer beliebig viele LEDs {#ws2812b}
 
@@ -57,6 +61,11 @@ Nanosekunden bis wenigen Mikrosekunden). Das Modul `neopixel` im micro:bit
 erzeugt dieses Timing exakt - im eigenen Code muss man sich darum nicht
 kuemmern, nur `np.show()` aufrufen.
 
+</details>
+
+<details>
+<summary><strong>TM1637</strong> - CLK + DATA, ein getaktetes 2-Draht-Protokoll</summary>
+
 ## TM1637: CLK + DATA - ein getaktetes 2-Draht-Protokoll {#tm1637}
 
 Bauteil-README: [code-samples/output/tm1637-4digit/](../code-samples/output/tm1637-4digit/) (dort auch die genaue Start/Stop-Bedingung und Byte-Adressierung)
@@ -70,6 +79,11 @@ programmieren (bit-gebanged) als das timing-kritische WS2812B-Protokoll.
 `DIO` wird dabei in **beide Richtungen** genutzt: der micro:bit sendet damit
 Befehle und Ziffern, der Chip meldet darauf (bei diesem Modul ungenutzt) auch
 eine Bestaetigung zurueck.
+
+</details>
+
+<details>
+<summary><strong>EC11-Drehgeber</strong> - zwei versetzte Signale zeigen die Richtung</summary>
 
 ## EC11-Drehgeber: zwei versetzte Signale zeigen die Richtung {#ec11}
 
@@ -87,6 +101,11 @@ Verzoegerung zwischen den beiden Signalen verraet die Drehrichtung:
 Der Code muss darum nur pruefen, *welches der beiden Signale zuerst kippt*,
 wenn eine Raste erreicht wird - daraus ergibt sich hoch- oder runterzaehlen.
 
+</details>
+
+<details>
+<summary><strong>HC-SR04</strong> - Abstand per Echo-Laufzeit</summary>
+
 ## HC-SR04: Abstand per Echo-Laufzeit {#hc-sr04}
 
 Bauteil-README: [code-samples/input/hc-sr04-abstandssensor/](../code-samples/input/hc-sr04-abstandssensor/) (dort auch die genaue Formel und Spannungsteiler-Variante)
@@ -101,6 +120,11 @@ Schallgeschwindigkeit bekannt ist (~343 m/s bei Zimmertemperatur), laesst
 sich daraus direkt der Abstand berechnen - genau das macht `dauer_us / 58.0`
 in der README.
 
+</details>
+
+<details>
+<summary><strong>Servo</strong> - PWM, die Pulslaenge bestimmt den Winkel</summary>
+
 ## Servo: PWM - die Pulslaenge bestimmt den Winkel {#servo}
 
 Bauteil-README: [code-samples/servo/miuzei-9g-servo/](../code-samples/servo/miuzei-9g-servo/) (dort auch Kalibrierung und sichere Stromversorgung)
@@ -112,6 +136,11 @@ Impuls dauert - ca. 0.5 ms bedeutet fuer den Servo "fahre auf 0 Grad", ca.
 2.4 ms "fahre auf 180 Grad", dazwischen linear. Der Servo hat intern eine
 eigene kleine Elektronik, die diese Pulslaenge staendig misst und den Motor
 so lange nachregelt, bis die Achse den passenden Winkel erreicht hat.
+
+</details>
+
+<details>
+<summary><strong>SPI</strong> (ST7735-Display) - getaktet wie TM1637, aber schneller und mit Adressierung</summary>
 
 ## SPI (ST7735-Display): getaktet wie TM1637, aber schneller und mit Adressierung {#spi}
 
@@ -133,3 +162,5 @@ mit vielen Pixeln praktikabler:
 Die zusaetzliche Leitung `A0`/`DC` sagt dem Display, ob die naechsten Bytes
 ein **Befehl** (z. B. "Bildschirm loeschen") oder **Bilddaten** (Pixelfarben)
 sind.
+
+</details>

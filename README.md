@@ -23,6 +23,9 @@ Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 
 ## Repo-Struktur
 
+<details>
+<summary>Ordnerstruktur anzeigen</summary>
+
 ```
 micro_bit/
 ├── README.md
@@ -87,6 +90,8 @@ micro_bit/
         └── tm1637-4digit/
 ```
 
+</details>
+
 ## Samples
 
 ### onboard (eingebaut, kein Aufbau)
@@ -146,6 +151,9 @@ micro_bit/
 
 ## Neues Sample hinzufuegen
 
+<details>
+<summary>Anleitung anzeigen</summary>
+
 1. Ordner `code-samples/<kategorie>/<bauteil>/<sample>/` anlegen mit `main.py`
    und `README.md`. Bei externen Bauteilen zusaetzlich `wiring/`.
 2. Die `README.md` nach dem festen Abschnitts-Schema aufbauen (Details:
@@ -165,7 +173,12 @@ micro_bit/
    Marker ein. Nach jeder Aenderung an `main.py` erneut laufen lassen;
    `python tools/build_readme.py --check` meldet veraltete READMEs.
 
+</details>
+
 ## Website (GitHub Pages)
+
+<details>
+<summary>Details anzeigen</summary>
 
 Dieses Repo laesst sich unveraendert als Website veroeffentlichen: die
 `_config.yml` im Root aktiviert Jekyll (Theme `minima`) mit den GitHub-Pages-
@@ -178,6 +191,8 @@ Branch `main` / `(root)`**. Danach ist die Seite unter
 `https://masta-nksa.github.io/microbit-micropython-samples/` erreichbar und
 aktualisiert sich bei jedem Push automatisch. Lokale Vorschau:
 `bundle exec jekyll serve`.
+
+</details>
 
 ## Hinweise
 
