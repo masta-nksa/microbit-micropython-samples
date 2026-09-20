@@ -1,4 +1,4 @@
-# micro:bit V2.2 - MicroPython Sample Code
+# Impulswoche - MysteryBox
 
 Sammlung einfacher, kommentierter Beispielprogramme fuer den **BBC micro:bit V2.2**,
 programmiert in **MicroPython**. Entstanden fuer die Impulswoche an der
@@ -69,7 +69,7 @@ micro_bit/
 ├── docs/
 │   ├── setup.md                     Editor + Uebertragung auf den micro:bit
 │   ├── workflow.md                  Einstiegsweg Station fuer Station (Mo/Di)
-│   └── ablaufplan.md                Ablaufplan Impulswoche 2026 (Mo bis Fr)
+│   └── ablaufplan.md                Agenda 2026 (Mo bis Fr)
 ├── tools/
 │   └── build_readme.py              fuegt main.py in die Sample-READMEs ein
 │

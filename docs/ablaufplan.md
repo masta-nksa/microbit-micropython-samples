@@ -1,8 +1,8 @@
 ---
-title: Ablaufplan Impulswoche 2026
+title: Agenda 2026
 ---
 
-# Ablaufplan Impulswoche 2026
+# Agenda 2026
 
 ## Rahmen
 
