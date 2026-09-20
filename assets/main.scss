@@ -151,6 +151,53 @@ code {
   background: #F5F4EF;
 }
 
+// Kopieren-Button an Codebloecken (assets/copy-code.js)
+div.highlighter-rouge {
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  color: $grey-color-dark;
+  background: $background-color;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+div.highlighter-rouge:hover .copy-code-button,
+.copy-code-button:focus-visible {
+  opacity: 1;
+}
+
+.copy-code-button:hover {
+  border-color: $brand-color;
+  color: $brand-color;
+}
+
+.copy-code-button.is-done {
+  color: #fff;
+  background: $brand-color;
+  border-color: $brand-color;
+  opacity: 1;
+}
+
+.copy-code-button.is-error {
+  color: #fff;
+  background: #B3261E;
+  border-color: #B3261E;
+  opacity: 1;
+}
+
 table {
   border-color: $grey-color-light;
 }
