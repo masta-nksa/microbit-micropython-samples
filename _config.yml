@@ -15,6 +15,7 @@ header_pages:
   - docs/setup.md
   - docs/workflow.md
   - docs/theorie.md
+  - docs/ablaufplan.md
 
 # Dropdown "Tools" im Header (siehe _includes/header.html)
 tools_menu:

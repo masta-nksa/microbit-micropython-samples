@@ -47,6 +47,9 @@ Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 Fester Einstiegsweg (Station fuer Station, Servo + Sensoren + Anzeige bis zur
 Codeeingabe): [docs/workflow.md](docs/workflow.md)
 
+Zeitplan der ganzen Woche (Tage, Meilensteine, Fristen):
+[docs/ablaufplan.md](docs/ablaufplan.md)
+
 ## Tools
 
 Anleitungen rund um den Bau, auf der Website im Menue **Tools**:
@@ -65,7 +68,8 @@ micro_bit/
 ├── README.md
 ├── docs/
 │   ├── setup.md                     Editor + Uebertragung auf den micro:bit
-│   └── workflow.md                  Einstiegsweg Station fuer Station (Mo/Di)
+│   ├── workflow.md                  Einstiegsweg Station fuer Station (Mo/Di)
+│   └── ablaufplan.md                Ablaufplan Impulswoche 2026 (Mo bis Fr)
 ├── tools/
 │   └── build_readme.py              fuegt main.py in die Sample-READMEs ein
 │
