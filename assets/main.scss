@@ -158,44 +158,46 @@ div.highlighter-rouge {
 
 .copy-code-button {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  z-index: 1;
-  font: inherit;
-  font-size: 12px;
-  line-height: 1;
-  padding: 6px 10px;
-  color: $grey-color-dark;
-  background: $background-color;
-  border: 1px solid $grey-color-light;
-  border-radius: 6px;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: $grey-color;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
   cursor: pointer;
-  opacity: 0.75;
-  transition: opacity 0.15s ease, border-color 0.15s ease;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 
 div.highlighter-rouge:hover .copy-code-button,
-.copy-code-button:focus-visible {
+.copy-code-button:focus-visible,
+.copy-code-button.is-done,
+.copy-code-button.is-error {
   opacity: 1;
 }
 
 .copy-code-button:hover {
-  border-color: $brand-color;
   color: $brand-color;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .copy-code-button.is-done {
-  color: #fff;
-  background: $brand-color;
-  border-color: $brand-color;
-  opacity: 1;
+  color: $brand-color;
 }
 
 .copy-code-button.is-error {
-  color: #fff;
-  background: #B3261E;
-  border-color: #B3261E;
-  opacity: 1;
+  color: #B3261E;
+}
+
+// Touch-Geraete haben kein Hover: Icon dauerhaft leicht sichtbar
+@media (hover: none) {
+  .copy-code-button {
+    opacity: 0.6;
+  }
 }
 
 table {
