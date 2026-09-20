@@ -44,6 +44,9 @@ Alle Beispiele sind fuer den Online-Editor gedacht:
 
 Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 
+Fester Einstiegsweg (Station fuer Station, Servo + Sensoren + Anzeige bis zur
+Codeeingabe): [docs/workflow.md](docs/workflow.md)
+
 ## Repo-Struktur
 
 <details markdown="1">
@@ -53,7 +56,8 @@ Uebertragung Schritt fuer Schritt: [docs/setup.md](docs/setup.md)
 micro_bit/
 ├── README.md
 ├── docs/
-│   └── setup.md                     Editor + Uebertragung auf den micro:bit
+│   ├── setup.md                     Editor + Uebertragung auf den micro:bit
+│   └── workflow.md                  Einstiegsweg Station fuer Station (Mo/Di)
 ├── tools/
 │   └── build_readme.py              fuegt main.py in die Sample-READMEs ein
 │
@@ -89,7 +93,8 @@ micro_bit/
 │   │       ├── sweep/
 │   │       ├── winkel-mit-encoder/
 │   │       ├── endlagen-kalibrieren/
-│   │       └── bolzen-schalten/
+│   │       ├── bolzen-schalten/
+│   │       └── box-startprogramm/
 │   └── output/
 │       ├── ws2812b-led-strip/
 │       │   ├── erste-farben/
@@ -158,6 +163,7 @@ micro_bit/
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [winkel-mit-encoder](code-samples/servo/miuzei-9g-servo/winkel-mit-encoder/) | EC11-Drehknopf stellt den Winkel |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [endlagen-kalibrieren](code-samples/servo/miuzei-9g-servo/endlagen-kalibrieren/) | sichere Endpunkte einer eigenen Mechanik finden |
 | [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [bolzen-schalten](code-samples/servo/miuzei-9g-servo/bolzen-schalten/) | zwischen zwei kalibrierten Endpunkten fahren (Endanschlag) |
+| [miuzei-9g-servo](code-samples/servo/miuzei-9g-servo/) | [box-startprogramm](code-samples/servo/miuzei-9g-servo/box-startprogramm/) | Startprogramm fuer die eigene Box: A oeffnet, B schliesst, dazu Ideen mit den Sensoren |
 
 ### output
 

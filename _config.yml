@@ -13,6 +13,7 @@ header_pages:
   - code-samples/README.md
   - hardware/README.md
   - docs/setup.md
+  - docs/workflow.md
   - docs/theorie.md
 
 markdown: kramdown

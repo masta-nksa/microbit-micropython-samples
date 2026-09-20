@@ -117,5 +117,6 @@ fertigen Funktionen `bolzen_rein()` / `bolzen_raus()` mit.
 4. [winkel-mit-encoder/](winkel-mit-encoder/) - Drehknopf (EC11) stellt den Winkel
 5. [endlagen-kalibrieren/](endlagen-kalibrieren/) - sichere Endpunkte einer eigenen Mechanik finden
 6. [bolzen-schalten/](bolzen-schalten/) - zwischen zwei kalibrierten Endpunkten fahren (Endanschlag)
+7. [box-startprogramm/](box-startprogramm/) - Startprogramm fuer die eigene Mysterybox: A oeffnet, B schliesst, dazu Ideen mit den Sensoren des micro:bit
 
 Masse fuers CAD (spaeter): [../../../hardware/servo/miuzei-9g-servo/](../../../hardware/servo/miuzei-9g-servo/)
