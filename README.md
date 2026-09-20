@@ -53,7 +53,7 @@ Anleitungen rund um den Bau, auf der Website im Menue **Tools**:
 
 - [Loeten](hardware/loeten.md): Temperaturen, Schritte, Fehlersuche
 - [LightBurn](hardware/lightburn.md): DXF-Dateien fuer den Lasercutter erstellen und vorbereiten (mit Video-Tutorial)
-- [Fusion 360](hardware/fusion-360.md): 3D modellieren (Video-Tutorial, eigene Anleitung in Arbeit)
+- [Fusion 360](hardware/fusion-360.md): 3D modellieren, zwei Uebungen (DXF fuer den Laser, STL fuer den 3D-Druck)
 
 ## Repo-Struktur
 
