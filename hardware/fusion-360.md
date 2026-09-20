@@ -5,6 +5,14 @@
 > fertig ist, steht hier, wie Fusion in diesem Projekt eingesetzt wird und wo
 > die fertigen Dateien liegen.
 
+## Einstieg als Video
+
+[Fusion 360 Tutorial fuer Anfaenger: Erste Schritte in der CAD-Software
+(Deutsch)](https://www.youtube.com/watch?v=zZTSAMQc7jc) (YouTube, Kanal
+mak3r). Weiteres Einsteiger-Video, falls dir das erste nicht liegt: [So geht
+Fusion - Einsteigertutorial fuer Autodesk Fusion
+360](https://www.youtube.com/watch?v=mI7RYHItzmM) (Kanal Druckwerkstatt 3D).
+
 ## Wofuer wir Fusion brauchen
 
 Die Teile fuer Box, Halterungen und Mechanik werden als 3D-Modell in Fusion

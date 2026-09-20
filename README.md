@@ -52,8 +52,8 @@ Codeeingabe): [docs/workflow.md](docs/workflow.md)
 Anleitungen rund um den Bau, auf der Website im Menue **Tools**:
 
 - [Loeten](hardware/loeten.md): Temperaturen, Schritte, Fehlersuche
-- [LightBurn](hardware/lightburn.md): Dateien fuer den Lasercutter vorbereiten
-- [Fusion 360](hardware/fusion-360.md): 3D modellieren (Anleitung in Arbeit)
+- [LightBurn](hardware/lightburn.md): DXF-Dateien fuer den Lasercutter erstellen und vorbereiten (mit Video-Tutorial)
+- [Fusion 360](hardware/fusion-360.md): 3D modellieren (Video-Tutorial, eigene Anleitung in Arbeit)
 
 ## Repo-Struktur
 

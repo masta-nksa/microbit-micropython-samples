@@ -20,7 +20,7 @@ header_pages:
 tools_menu:
   - label: Loeten
     path: hardware/loeten.md
-  - label: LightBurn (Laser-Dateien)
+  - label: LightBurn (DXF erstellen)
     path: hardware/lightburn.md
   - label: Fusion 360 (3D modellieren)
     path: hardware/fusion-360.md

@@ -6,6 +6,12 @@ vorhandenen Ausschnitt- und Halterungs-Dateien. Material-spezifische
 Schnitt-/Gravurwerte (Speed/Power/Fokus) stehen separat:
 [lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md).
 
+**Einstieg als Video:** [LightBurn Anleitung & Tutorial in Deutsch: Grundlagen
+fuer Absolute Beginner mit Laser Cutter](https://www.youtube.com/watch?v=g37_picHlhs)
+(YouTube, Kanal Ultimartinum). Formen, Linien und Text lassen sich direkt in
+LightBurn zeichnen - die Schnitt-Ausschnitte fuer die Box muessen also nicht
+zwingend aus Fusion kommen.
+
 ## Alle Ausschnitt- und Halterungs-Dateien
 
 | Bauteil | Kategorie | Datei | Zweck |
