@@ -1,7 +1,8 @@
-# LightBurn: Bedienung & alle Ausschnitt-Dateien
+# LightBurn: DXF erstellen, Bedienung & alle Ausschnitt-Dateien
 
 Allgemeine LightBurn-Bedienung (Software zum Vorbereiten und Senden von
-Dateien an den Lasercutter) sowie eine Uebersicht **aller** in diesem Repo
+Dateien an den Lasercutter), eine Uebung zum Zeichnen und Exportieren einer
+eigenen DXF sowie eine Uebersicht **aller** in diesem Repo
 vorhandenen Ausschnitt- und Halterungs-Dateien. Material-spezifische
 Schnitt-/Gravurwerte (Speed/Power/Fokus) stehen separat:
 [lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md).
@@ -11,6 +12,99 @@ fuer Absolute Beginner mit Laser Cutter](https://www.youtube.com/watch?v=g37_pic
 (YouTube, Kanal Ultimartinum). Formen, Linien und Text lassen sich direkt in
 LightBurn zeichnen - die Schnitt-Ausschnitte fuer die Box muessen also nicht
 zwingend aus Fusion kommen.
+
+## Uebung: Frontplatte mit Loch zeichnen und als DXF exportieren
+
+**Ziel:** Dieselbe Platte wie in [Fusion 360, Uebung 1](fusion-360.md), diesmal
+direkt in LightBurn gezeichnet: 60 x 40 mm mit rundem Loch (D 4.0 mm) fuer den
+Stoessel des DS425-Tasters. Am Ende steht eine `.dxf`-Datei.
+
+**Wann LightBurn, wann Fusion?**
+
+| Teil | Werkzeug |
+|------|----------|
+| flache Platte mit Loechern, Fenstern, Rechtecken, Kreisen | **LightBurn** (schnell, kein CAD noetig) |
+| Teile mit Fingerzinken, Parametern, mehreren Teilen die zusammenpassen | [Fusion 360](fusion-360.md) |
+| 3D-Druckteile (Halterungen, Mechanik) | [Fusion 360](fusion-360.md), Export als `.stl` |
+
+### 1. Neues Projekt
+
+1. **Datei -> Neu**.
+2. Oben in der Leiste **Numeric Edits** (X, Y, Breite, Hoehe) den Einheiten-Knopf
+   auf **mm** stellen.
+
+Alle Felder in dieser Leiste koennen **rechnen**: Du kannst z. B. `60+0.25`
+eintippen.
+
+### 2. Rechteck zeichnen
+
+1. **Rechteck** waehlen (`Strg + R` oder links im Menue *Draw Shapes*) und im
+   Arbeitsbereich aufziehen.
+2. In der Leiste oben das **Schloss** (Seitenverhaeltnis) **oeffnen** und
+   eintragen: Breite `60+0.25`, Hoehe `40+0.25`.
+3. Im **9-Punkte-Raster** neben X/Y den **Mittelpunkt** anklicken und
+   **X = 100**, **Y = 100** eintragen.
+
+### 3. Loch zeichnen
+
+1. **Ellipse** waehlen (`Strg + E`) und aufziehen. Mit gehaltener **Shift-Taste**
+   wird daraus ein Kreis.
+2. Schloss **schliessen**, Breite `4-0.25` eintragen (Hoehe folgt).
+3. Wieder im Raster den **Mittelpunkt** anklicken und **X = 100**, **Y = 100**
+   eintragen. Der Kreis sitzt jetzt genau in der Mitte des Rechtecks.
+
+> **Warum `+0.25` und `-0.25`?** Der Laser schneidet etwa 0.25 mm breit
+> (Kerf). Aussenkanten werden dadurch kleiner, Loecher groesser als gezeichnet.
+> Darum Aussenmass **plus** Kerf, Loch **minus** Kerf. Der Kerf steckt dann
+> schon in der Zeichnung, der Schnittversatz in LightBurn bleibt auf 0
+> (Werte: [lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md)).
+
+### 4. Ebene zuweisen
+
+1. Beide Objekte auswaehlen (`Strg + A`).
+2. Unten in der Farbpalette dieselbe Farbe anklicken, beide Objekte liegen
+   dann in derselben Ebene.
+3. Die Schnittwerte dieser Ebene aus
+   [lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md#bestaetigte-schnitt-ebene-cut)
+   eintragen (siehe
+   [Eine Ebene einstellen](#eine-ebene-einstellen-leistung-geschwindigkeit-fokus)).
+
+Die Schnittwerte gehoeren zum **LightBurn-Projekt**, nicht zur DXF. Die DXF
+enthaelt nur die Geometrie.
+
+### 5. Als DXF exportieren
+
+1. **Beide Objekte auswaehlen** (`Strg + A`). Ist nichts ausgewaehlt, wird das
+   ganze Projekt exportiert.
+2. **Datei -> Export** (`Alt + X`).
+3. Als Dateityp **DXF** waehlen, Namen und Ordner angeben, speichern.
+4. Zusaetzlich das Projekt mit **Datei -> Speichern unter** als LightBurn-Datei
+   (`.lbrn2`) sichern. Dort stehen die Schnittwerte.
+
+### 6. Kontrolle
+
+1. **Datei -> Neu**, dann **Datei -> Importieren** und die eben gespeicherte
+   `.dxf` waehlen.
+2. Alles auswaehlen: Breite/Hoehe muss **60.25 x 40.25 mm** zeigen. Den Kreis
+   anklicken: **3.75 mm** Durchmesser.
+
+**Fertig, wenn:** Die importierte DXF zeigt ein Rechteck 60.25 x 40.25 mm mit
+einem Kreis D 3.75 mm in der Mitte.
+
+### Wenn etwas nicht klappt
+
+| Problem | Ursache | Loesung |
+|---------|---------|---------|
+| Breite und Hoehe aendern sich gemeinsam | Schloss ist geschlossen | Schloss oeffnen |
+| Aus dem Kreis wird eine Ellipse | Beim Aufziehen keine Shift-Taste | Schloss schliessen und nur die Breite eintragen |
+| Der Kreis sitzt nicht in der Mitte | Raster steht auf einer Ecke statt auf dem Mittelpunkt | Im 9-Punkte-Raster die Mitte anklicken, dann X/Y neu eintragen |
+| In der DXF sind zu viele oder zu wenige Objekte | Vor dem Export war nichts oder das Falsche ausgewaehlt | Zuerst auswaehlen, dann exportieren |
+| Beschriftung in der DXF ist verschoben oder fehlt | DXF-Text ist unzuverlaessig | Text nicht mit exportieren, sondern im LightBurn-Projekt setzen |
+
+Mehr dazu in der LightBurn-Dokumentation:
+[Formen zeichnen](https://docs.lightburnsoftware.com/latest/Reference/PrimaryShapes/),
+[Numeric Edits](https://docs.lightburnsoftware.com/UI/NumericEdits),
+[Datei-Menue (Export)](https://docs.lightburnsoftware.com/latest/Reference/UI/FileMenu/).
 
 ## Alle Ausschnitt- und Halterungs-Dateien
 
