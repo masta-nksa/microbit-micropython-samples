@@ -86,7 +86,7 @@ heisse Zahnraeder, Brownout/Reset am micro:bit.
 
 Regeln:
 
-- **Zwei kalibrierte Endpunkte** (`PULS_A`, `PULS_B` in Mikrosekunden), der
+- **Zwei kalibrierte Endpunkte** (z. B. `PULS_REIN` / `PULS_RAUS` bzw. `PULS_AUF` / `PULS_ZU` in Mikrosekunden), der
   Servo faehrt nur dazwischen. `set_puls()` klemmt jeden Wert hart auf dieses
   Fenster.
 - Jeweils **~30 µs Sicherheitsmarge** vom echten Anschlag weg (Servo-Toleranz,

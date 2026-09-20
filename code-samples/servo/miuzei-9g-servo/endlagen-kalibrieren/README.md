@@ -130,13 +130,23 @@ Details: [../../../../docs/setup.md](../../../../docs/setup.md).
 1. Servo **entkoppelt** oder grob mittig montiert anschliessen, Sketch starten.
 2. **Open Serial** oeffnen.
 3. Mechanik ankoppeln (falls entkoppelt gestartet).
-4. Mit **A** langsam Richtung erste Endlage fahren. **Stoppen, sobald der
+4. Mit **A** langsam Richtung **erste Endlage** fahren. **Stoppen, sobald der
    Servo anfaengt zu brummen oder haerter zu klingen** - das ist der Anschlag.
 5. Ein kleines Stueck mit **B** zurueck (ca. 30 µs = 6 Schritte) = Sicherheitsmarge.
-6. **A+B** druecken -> Wert vom Display / Serial ablesen und notieren
-   (das ist `PULS_A`).
-7. Dasselbe mit **B** Richtung zweite Endlage -> `PULS_B` notieren.
-8. Beide Werte in [bolzen-schalten/main.py](../bolzen-schalten/main.py) eintragen.
+6. **A+B** druecken -> Wert vom Display / Serial ablesen und als **Wert 1**
+   notieren (zusammen mit der Lage, z. B. "Bolzen eingefahren" oder "Box offen").
+7. Dasselbe mit **B** Richtung **zweite Endlage** -> als **Wert 2** notieren
+   (wieder mit Lage, z. B. "Bolzen ausgefahren" oder "Box zu").
+8. Die beiden Werte im Programm eintragen - welche Variable, haengt vom Sample ab:
+
+   | Lage | [bolzen-schalten](../bolzen-schalten/) | [box-startprogramm](../box-startprogramm/) |
+   |---|---|---|
+   | eingefahren / offen | `PULS_REIN` | `PULS_AUF` |
+   | ausgefahren / zu | `PULS_RAUS` | `PULS_ZU` |
+
+   Welcher Wert zu welcher Lage gehoert, entscheidet die Mechanik, nicht die
+   Reihenfolge der Messung. Faehrt es spaeter verkehrt herum, beide Werte
+   einfach tauschen.
 
 ## Erwartetes Verhalten
 
