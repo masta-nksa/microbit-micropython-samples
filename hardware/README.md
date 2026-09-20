@@ -10,8 +10,10 @@ Gehaeuse im CAD (z. B. Fusion) erzeugt werden koennen.
 Schnitt-/Gravurparameter fuers Serienmaterial: [lasercutter-pappelsperrholz.md](lasercutter-pappelsperrholz.md).
 LightBurn-Bedienung und Tabelle **aller** Ausschnitt-/Halterungs-Dateien:
 [lightburn.md](lightburn.md).
-Temperatur-Richtwerte und Technik fuers Loeten von Pinheadern/Kabeln:
+Loeten (Temperaturen pro Bauteil, Schritt-fuer-Schritt-Anleitung, Fehlersuche):
 [loeten.md](loeten.md).
+Modellieren in Fusion 360: [fusion-360.md](fusion-360.md).
+Loeten, LightBurn und Fusion stehen auf der Website auch im Menue **Tools**.
 
 ## Aufbau
 

@@ -16,6 +16,15 @@ header_pages:
   - docs/workflow.md
   - docs/theorie.md
 
+# Dropdown "Tools" im Header (siehe _includes/header.html)
+tools_menu:
+  - label: Loeten
+    path: hardware/loeten.md
+  - label: LightBurn (Laser-Dateien)
+    path: hardware/lightburn.md
+  - label: Fusion 360 (3D modellieren)
+    path: hardware/fusion-360.md
+
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge

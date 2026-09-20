@@ -1,88 +1,60 @@
-# Loeten: Pinheader & Kabel an Module
+# Loeten
 
-Kurzanleitung fuers Anloeten von Pinheadern und Kabeln an die Module in
-diesem Projekt (TM1637, ST7735-Display, HC-SR04, EC11-Encoder,
-DS425-Taster, WS2812B-Strip). Gilt fuer eine **stufenlos regelbare
-Loetstation bis 400 °C** mit **bleifreiem Lot** (z. B. SAC305/Sn99Cu1,
-Schmelzpunkt ca. 217-227 °C - am eigenen Lot pruefen, steht auf der Rolle).
+Auf dieser Seite findest du alles, was du zum Loeten in der Projektwoche brauchst: die richtige Temperatur, eine Tabelle pro Bauteil und eine Schritt-fuer-Schritt-Anleitung. Es reicht, wenn die Loetstelle **haelt und leitet**. Perfekt muss sie nicht aussehen.
 
-> **Sicherheit:** Loetkolben nur nach Einweisung und unter Aufsicht
-> benutzen. Immer auf der Ablage/im Staender abstellen, nie ablegen. Spitze
-> wird >200 °C heiss - nicht beruehren, auch kurz nach dem Ausschalten
-> nicht (kuehlt langsam ab). In einem beluefteten Raum arbeiten - Loetrauch
-> (Kolophonium aus dem Flussmittel) nicht einatmen, Kopf zur Seite halten
-> statt direkt ueber die Loetstelle zu beugen. Nach dem Loeten Haende
-> waschen (Flussmittel/Zinnstaub, nicht nur wegen Blei). Kein
-> Lot/Flussmittel essen oder in die Naehe von Lebensmitteln bringen.
-> Loetkolben nach Gebrauch immer ausschalten/ausstecken.
+## Grundeinstellung
 
-## Temperatur-Richtwerte (bleifreies Lot)
+| Was | Einstellung |
+|---|---|
+| Lot | bleifrei, 0,8 mm, mit Flussmittelseele |
+| Temperatur Loetkolben | **330-350 °C** |
+| Zeit pro Loetstelle | **2-4 Sekunden** |
 
-Bleifreies Lot braucht wegen des hoeheren Schmelzpunkts mehr Hitze als
-bleihaltiges (ca. 183 °C) - deshalb hier bewusst hoehere Werte als bei den
-oft zitierten "300 °C"-Faustregeln, die meist von bleihaltigem Lot ausgehen:
+Dauert eine Loetstelle deutlich laenger, ist die Spitze zu kalt oder schmutzig. Wische sie ab und verzinne sie neu.
 
-| Loetstelle | Spitzentemperatur | Bemerkung |
+## Temperaturen pro Bauteil
+
+| Was wird geloetet | Temperatur | Zeit | Hinweis |
+|---|---|---|---|
+| Litze verzinnen (Batteriehalter-Kabel, Dupont-Kabel) | 330-350 °C | 2-3 s | 3-4 mm abisolieren, Litze verdrillen, Lot an die Litze halten, nicht an die Spitze |
+| Kabel an Kabel (z. B. Batteriehalter an Servo-Kabel) | 340-350 °C | 3 s | Schrumpfschlauch **vorher** aufschieben. Erst beide Enden verzinnen, dann zusammenlegen und kurz erhitzen |
+| Taster (Pins an Platine oder Kabel an Pin) | 330-350 °C | max. 3 s | Pin und Pad gleichzeitig erhitzen, das Kunststoffgehaeuse nicht beruehren |
+| Stiftleiste / Pins an Platine | 330-350 °C | 2-3 s | Zuerst einen Pin anheften, gerade ausrichten, dann die uebrigen loeten |
+| Elektrolytkondensator | 330 °C | max. 3 s | **Polaritaet beachten** (Streifen = Minus). Nicht ueberhitzen |
+| Ringkabelschuh / Metalloese | 350 °C | 3-5 s | Grosse Metallmasse braucht mehr Waerme |
+| Dickes Kabel (Litze ueber 0,5 mm²) | 350 °C | 4-5 s | Breite Spitze waehlen, gut vorverzinnen |
+
+> **Nicht loeten:** Plastik-Steckergehaeuse (Servo-Stecker, Dupont-Huelsen). Sie schmelzen sofort. Verwende sie zum Stecken, oder schneide den Stecker ab und verzinne die Litze.
+
+## So loetest du eine Loetstelle in 6 Schritten
+
+1. **Spitze reinigen:** an feuchtem Schwamm oder Messingwolle abwischen und leicht verzinnen.
+2. **Beide Teile erwaermen:** Kolben gleichzeitig an Kabel und Anschluss halten.
+3. **Lot zugeben:** an die **Loetstelle** halten, nicht an den Kolben.
+4. **Erst Lot, dann Kolben wegnehmen** und die Verbindung **3 Sekunden nicht bewegen**.
+5. **Kontrollieren:** Eine gute Loetstelle ist glaenzend, glatt und leicht nach innen gewoelbt (wie ein kleiner Vulkan). Matt, kugelig oder rissig heisst: nochmals kurz erhitzen und etwas Lot zugeben.
+6. **Schutz:** Schrumpfschlauch ueber die Stelle schieben und erhitzen. Zum Schluss leicht am Kabel ziehen, um den Halt zu testen.
+
+## Batteriehalter und Kabel
+
+- **Rot = Plus, Schwarz = Minus.** Nie vertauschen.
+- Rotes und schwarzes Kabel duerfen sich nie mit blanken Enden beruehren (Kurzschluss). Loete immer **ein Kabel nach dem anderen**.
+- Die **Batterien erst nach dem Loeten einlegen**, der Schalter bleibt beim Loeten auf "Aus".
+
+## Sicherheit
+
+- Loetkolben immer in den Halter legen, nie auf den Tisch.
+- Nach dem Loeten Kolben ausschalten und abkuehlen lassen.
+- Fuer frische Luft sorgen (Fenster auf), Loetrauch nicht einatmen.
+- Nach dem Loeten Haende waschen (bleifreies Lot enthaelt trotzdem Zusatzstoffe).
+- Loetstellen und Spitze sind lange heiss: Nicht anfassen.
+
+## Wenn etwas nicht klappt
+
+| Problem | Ursache | Loesung |
 |---|---|---|
-| Pinheader auf duennem Modul-PCB (TM1637, ST7735-Display) | **330-340 °C** | duenne Platinen/Pads loesen sich leichter ab - nicht laenger als 2-3 s pro Pin |
-| Kabel direkt an ein Pad/Loetauge | **340-350 °C** | Kabel vor dem Anloeten selbst verzinnen (siehe unten) |
-| Dicke Leiterbahn, Massefolie, dicker Draht (z. B. Servo-/Strip-Anschluss) | **350-360 °C**, im Zweifel bis 370 °C | dicke Kupferflaechen leiten die Waerme weg, brauchen kurzzeitig mehr Energie |
-
-**Grundregel: so kalt wie moeglich, so heiss wie noetig.** Nicht einfach auf
-400 °C stellen "damit es schneller geht" - hoehere Temperatur heisst mehr
-Oxidation an der Spitze, schnellerer Spitzenverschleiss und ein hoeheres
-Risiko, Bauteile oder Leiterbahnen zu beschaedigen. Wenn eine Loetstelle bei
-den Werten oben laenger als ca. 3-4 Sekunden braucht, ist meist die Spitze
-verschmutzt/oxidiert oder zu klein fuer die Waermemenge - nicht die
-Temperatur weiter hochdrehen, sondern Spitze reinigen (siehe unten). Nach
-oben ist noch Reserve bis 400 °C fuer Ausnahmefaelle (z. B. sehr grosse
-Masseflaechen), das ist aber nicht der Normalfall.
-
-## Technik in Kuerze
-
-1. **Spitze verzinnen**, bevor es losgeht: kurz auf den feuchten Schwamm
-   oder ins Messing-Reinigungswolle-Pad tippen, dann einen kleinen
-   Lottropfen auf die Spitze geben - sie soll glaenzend-silbern sein, nicht
-   grau/oxidiert.
-2. Loetkolben **an Pad UND Kabel/Pin gleichzeitig** halten (nicht nur am
-   Draht), ca. 1-2 Sekunden vorwaermen.
-3. **Lot an die Verbindungsstelle** fuehren (nicht an die Kolbenspitze) -
-   das Lot soll durch die Waerme von Pad und Pin schmelzen, nicht durch die
-   Spitze direkt.
-4. Genug Lot fuer eine kleine, glatte Wulst, dann zuerst das **Lot**, dann
-   den **Kolben** wegziehen.
-5. **Nicht bewegen**, bis die Stelle abgekuehlt ist (ca. 2-3 Sekunden) -
-   sonst entsteht eine "kalte" Loetstelle.
-
-### Kabel vorverzinnen
-
-Bei freien Kabelenden (nicht direkt an einem Pad): Ader abisolieren, kurz
-verdrillen, Loetkolben an die Ader halten und einen duennen Lotfilm
-aufziehen ("verzinnen"), **bevor** sie an das Pad geloetet wird. Das macht
-die eigentliche Verbindung schneller und zuverlaessiger.
-
-## Gute vs. schlechte Loetstelle
-
-| Merkmal | Gut | Schlecht |
-|---|---|---|
-| Oberflaeche | glatt, glaenzend | matt, koernig ("kalte Loetstelle") |
-| Form | kleiner, konkaver Huegel (wie ein Vulkan) | Kugel/Klumpen oder zu wenig Lot |
-| Pin sichtbar | Kontur des Pins/Drahts noch leicht erkennbar | Pin komplett im Lot versteckt |
-| Nachbarpins | sauber getrennt | Lotbruecke zum Nachbarpin |
-
-Bei engen Pinreihen (4-polige Module wie TM1637/LCD, Pitch oft 2.54 mm oder
-enger) **immer auf Bruecken zum Nachbarpin pruefen** - im Zweifel mit einer
-Lupe oder dem Handy-Foto vergroessert nachschauen. Eine Bruecke laesst sich
-mit Entloetlitze oder durch nochmaliges, vorsichtiges Erhitzen und
-Abstreifen entfernen.
-
-## Spitzenpflege
-
-- Vor und nach dem Loeten auf dem **feuchten Schwamm oder Messingwolle**
-  abstreifen - Messingwolle ist schonender fuer die Spitze als ein nasser
-  Schwamm (kein Temperaturschock).
-- Spitze **nie trocken** oder laenger unbenutzt ohne Lotschicht liegen
-  lassen - vor dem Ausschalten/Ablegen einen kleinen Lottropfen auf der
-  Spitze belassen, das schuetzt vor Oxidation.
-- Grau-schwarze, "verbrannte" Spitze loetet schlecht (Waerme kommt nicht
-  mehr an) - erst reinigen/neu verzinnen, bevor die Temperatur erhoeht wird.
+| Lot perlt ab, bleibt kugelig | Spitze oder Teil schmutzig, zu kalt | Spitze reinigen, neu verzinnen, Teile laenger erwaermen |
+| Loetstelle matt und rissig | Beim Erkalten bewegt | Nochmals erhitzen und ruhig halten |
+| Zu viel Lot | zu lange Lot zugegeben | Kolben mit wenig Lot nochmals ansetzen oder Loetsaugschnur verwenden |
+| Isolation schmilzt weit zurueck | zu lange erhitzt | Kuerzer erhitzen, Litze besser vorverzinnen |
+| Zwei Pins beruehren sich | Lotbruecke | Mit sauberer Spitze nachfahren, das Lot wandert weg |
