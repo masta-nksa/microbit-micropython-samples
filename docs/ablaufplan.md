@@ -6,7 +6,7 @@ title: Ablaufplan Impulswoche 2026
 
 ## Rahmen
 
-Montag bis Donnerstag sind je 5,5 Stunden Kernarbeitszeit eingeplant (09:00 bis 11:45 und 13:15 bis 16:00), am Freitag bleibt rund eine Stunde zum Fertigstellen. Zusammen sind das etwa 23 Stunden brutto, etwas weniger als die 25 bis 30 Stunden im Konzept.
+Montag bis Donnerstag sind je 5,5 Stunden Kernarbeitszeit eingeplant (09:00 bis 11:45 und 13:15 bis 16:00), am Freitag bleibt rund eine Stunde zum Fertigstellen.
 
 | Zeit (Mo bis Do) | Was | Verbindlich? |
 | --- | --- | --- |
@@ -137,8 +137,6 @@ Die Praesentationen laufen von 10:00 bis 11:10, das Ende ist fuer 11:40 geplant 
 | 11:25 bis 11:40 | Material einsammeln und Arbeitsplaetze aufraeumen |
 | 11:40 bis 12:00 | Puffer, danach Abschluss |
 
-Bleibt die Praesentation im Verzug, wird zuerst der Rueckblick gekuerzt, nie die Demo einer Gruppe.
-
 ## Fristen fuer Laser und 3D-Druck
 
 Laserteile sind bis Mittwochnachmittag gelasert, spaetestens bis Donnerstagnachmittag. 3D-Druckteile muessen bis Donnerstag in Auftrag sein, damit sie ueber Nacht auf Freitag gedruckt werden koennen, das ist schon riskant.
@@ -148,13 +146,8 @@ Laserteile sind bis Mittwochnachmittag gelasert, spaetestens bis Donnerstagnachm
 | Laserteile | Mittwochnachmittag | Donnerstagnachmittag | danach bleibt Zeit fuer Einbau und Generalprobe |
 | 3D-Druck | so frueh wie moeglich | Donnerstag, Druck ueber Nacht | ein Fehldruck laesst keinen zweiten Versuch mehr zu, am Freitag bleibt nur Einbauen und Testen |
 
-## Puffer und Hinweise
+## Hinweise
 
-Die Woche hat drei eingebaute Reserven; alles andere ist bewusst dicht geplant.
-
-- **Reserven:** Dienstag 13:15 bis 13:45 (Vorprojekt nachholen), Freitag 09:00 bis 09:50 (Fertigstellen), Freitag 11:40 bis 12:00.
-- **Engpass Montag:** Loetplaetze fuer die LED-Strips. Am Montag loeten nur die Gruppen, die mit Basisprogramm und Sensoraufgabe fertig sind, alle anderen holen es am Dienstagvormittag nach.
 - **Gleitzeit:** Verbindlich sind nur die Startrunden um 09:00 und 13:15 sowie das Aufraeumen ab 15:40. Was in den Startrunden gesagt wird, steht zusaetzlich als Tagesziel an der Tafel.
 - **Erweiterungen:** Display, Drehregler und Naeherungssensor gibt es erst ab Dienstag 13:15 und nur fuer Interessierte.
-- **Vor Montag pruefen:** Drei AA-Zellen liefern 4,5 V, das liegt knapp unter den 4,8 bis 6 V, die fuer den Servo angegeben sind. Ein Testlauf mit frischen Batterien und 20 Oeffnungszyklen zeigt, ob der Schliessmechanismus damit zuverlaessig arbeitet.
 - **Nicht geplant:** Fixe Pausen am Vormittag und Nachmittag, jede Gruppe legt sie selbst, solange der Arbeitsplatz aufgeraeumt bleibt.
