@@ -1,16 +1,23 @@
-"""Taster Version 2: Fuehrungshuelse mit Klemmmutter, Stoessel und Knopf.
+"""Taster Version 2: Fuehrungshuelse mit Klemmmutter, Stoessel und Knopf mit Fuehrungsring.
 
 Baut in Fusion fuenf Koerper (alle Masse in mm):
   Huelse_links / Huelse_rechts   Rohr mit Aussengewinde Tr12x2, unten flacher L-Fuss mit
                                  Taster-Aussparung (liegt unter dem Holz), oben Lippe
   Stoessel                       Zylinder, gleitet in der Huelse; Druckstift unten,
                                  Hals mit Gewinde M5x0.8 oben
-  Knopf                          Drehknopf, sitzt auf dem Hals (Hub einstellbar)
+  Knopf                          Drehknopf mit Fuehrungsring; der Ring greift ueber den
+                                 glatten Rundstab der Huelse oberhalb der Klemmmutter
   Klemmmutter                    Sechskantmutter Tr12x2, zieht die Huelse gegen das Holz
 
 Funktionsprinzip: Huelse von unten durch das runde Holzloch stecken, Klemmmutter von oben
-festziehen -> Huelse sitzt fest im Holz (jede Holzdicke bis holz_max). Der Stoessel gleitet
-in der Huelse (lange Fuehrung) und wird von der Feder des Tasters gegen die Lippe gedrueckt.
+festziehen -> Huelse sitzt fest im Holz. Der Stoessel gleitet in der Huelse (lange Fuehrung)
+und wird von der Feder des Tasters gegen die Lippe gedrueckt. Der Ring am Knopf greift ueber
+den Rundstab der Huelse ueber der Mutter - das fuehrt den Knopf beim Druecken zusaetzlich
+auf dem grossen Huelsendurchmesser statt nur ueber den duennen Gewindehals.
+
+Getestet und bestaetigt funktionierend (Holzdicke 6 mm, ohne Fuehrungsring). Diese Version ist
+auf genau diesen Anwendungsfall zugeschnitten (Parameter 'holz'), nicht mehr auf einen
+Dickenbereich - fuer eine andere Holzdicke 'holz' aendern und neu ausfuehren.
 
 Lokales Koordinatensystem der Huelse: Ursprung = Mitte des Holzlochs, Z = 0 = Oberkante des
 Fusses = Holzunterseite, Z waechst nach aussen. Der Stoessel hat sein eigenes Z (0 = Unterkante
@@ -34,8 +41,9 @@ P = dict(
     gew_d=12.0,         # Huelse: Aussengewinde Tr12x2 (Nenndurchmesser)
     pitch=2.0,
     loch_spiel=0.4,     # Holzloch = gew_d + loch_spiel  (12.4)
-    huelse_l=15.0,      # Laenge der Huelse ab Holzunterseite (Holzdicke + Mutter + Reserve)
-    holz_max=9.0,       # groesste Holzdicke (nur Kontrollrechnung)
+    holz=6.0,           # Holzdicke fuer genau diesen Aufbau (getestet, bestaetigt)
+    land_marge=0.5,     # Reserve zwischen Ring-Unterkante (voll aufgeschoben) und Mutter-Oberkante
+                         # (land() = skirt_l + land_marge; huelse_l() = holz + mutter_h + land())
     bohr_d=7.2,         # Fuehrungsbohrung
     lippe_t=2.0,        # Dicke der oberen Lippe
     lippe_d=5.4,        # Loch in der Lippe (Hals geht hindurch)
@@ -52,13 +60,18 @@ P = dict(
     stift_d=3.0,        # Druckstift auf den Taster
     stift_l=0.9,        # Laenge des Druckstifts (haelt den Koerper 0.9 ueber dem Taster)
     luft_lippe=0.4,     # Ruhespiel Koerper <-> Lippe (Toleranz fuer hoeheren Taster, = Rattern)
-    hals_gew_start=1.0, # Gewindebeginn ueber der Lippenoberkante (Ruhelage)
+    hals_gew_start=0.2, # Gewindebeginn ueber der Lippenoberkante (Ruhelage). Klein halten: alles
+                         # darueber geht dem Fuehrungsring verloren (siehe ring_eingriff_max()).
     hals_gew_l=4.7,     # Laenge des Gewindehalses (Knopf muss bis Luft 0 aufsitzen koennen)
-    knopf_luft=0.7,     # Voreinstellung: Hub = Abstand Knopf-Unterseite <-> Huelsenoberkante
-    knopf_d=14.0,
+    ring_eingriff=3.0,  # NUR zur Doku/Pruefung: wie tief der Ring beim Kalibrieren ueber die
+                         # Huelse geschoben ist (muss < ring_eingriff_max() bleiben, sonst klemmt
+                         # das M5-Gewinde auf dem glatten Hals statt auf dem Gewinde zu sitzen).
     knopf_dach=2.0,
-    knopf_bohr_t=6.0,
-    mutter_h=4.0,
+    m5_bohr_t=5.0,      # Tiefe des M5-Gewindes im Knopf (> hals_gew_l, kleine Reserve)
+    skirt_spiel=0.4,    # Durchmesserspiel des Fuehrungsrings auf dem Huelsen-Rundstab
+    skirt_l=4.0,         # Tiefe des Fuehrungsrings (Ueberlappung mit der Huelse, voll aufgeschoben)
+    skirt_wand=1.8,      # Wandstaerke des Fuehrungsrings
+    mutter_h=3.0,       # 1.5 Gewindegaenge bei Tr12x2 - fuer Handfestziehen ohne grosse Last genug
     mutter_af=17.0,     # Schluesselweite
     gew_spiel=0.15,     # Druckspiel Tr12x2-Innengewinde (Versatz je Flanke)
     gew_spiel_m5=0.15,  # Druckspiel M5-Innengewinde im Knopf
@@ -75,10 +88,31 @@ def loch_d():
     return P['gew_d'] + P['loch_spiel']
 
 
+def land():
+    """Freier Rundstab oberhalb der Mutter: Ring-Tiefe plus kleine Reserve zur Mutter."""
+    return P['skirt_l'] + P['land_marge']
+
+
+def huelse_l():
+    """Gesamtlaenge der Huelse: Holzdicke + Mutterhoehe + freier Rundstab (Ring-Fuehrung)."""
+    return P['holz'] + P['mutter_h'] + land()
+
+
+def ring_eingriff_max():
+    """Groesster Ring-Eingriff, bei dem das M5-Gewinde im Knopf noch vollstaendig auf dem
+    Gewinde des Stoessel-Halses sitzt (nicht auf dessen glattem Hals davor)."""
+    return P['skirt_l'] - P['hals_gew_start']
+
+
+def skirt_id():
+    """Innendurchmesser des Fuehrungsrings am Knopf (Spiel auf dem Huelsen-Aussengewinde)."""
+    return P['gew_d'] + P['skirt_spiel']
+
+
 def koerper_l():
     """Laenge des Stoesselkoerpers: Ruhelage auf dem Taster, 'luft_lippe' unter der Lippe."""
     z_b = P['stift_l'] - P['d_taster']                       # Koerper-Unterkante in Ruhe (Huelsen-Z)
-    return P['huelse_l'] - P['lippe_t'] - P['luft_lippe'] - z_b
+    return huelse_l() - P['lippe_t'] - P['luft_lippe'] - z_b
 
 
 def ruhe_z():
@@ -88,7 +122,7 @@ def ruhe_z():
 
 def hals_l1():
     """Laenge des glatten Halses zwischen Koerper und Gewindehals."""
-    return (P['huelse_l'] + P['hals_gew_start']) - (ruhe_z() + koerper_l())
+    return (huelse_l() + P['hals_gew_start']) - (ruhe_z() + koerper_l())
 
 
 def mm(v):
@@ -217,7 +251,7 @@ def huelse(bau, name, x_off, sx):
     """sx = +1: Fuss ragt nach +X (linker Taster, Rahmenwand bei -X); sx = -1: gespiegelt."""
     p = P
     root = bau.root
-    L = p['huelse_l']
+    L = huelse_l()
     n = p['taster'] / 2.0 + p['tasche_zu'] / 2.0
 
     def X(u):
@@ -289,19 +323,29 @@ def stoessel(bau, name, x_off):
 
 
 def knopf(bau, name, x_off):
+    """Knopf mit zweistufiger Bohrung: oben (nahe dem Dach) das M5-Gewinde fuer den
+    Stoessel-Hals, darunter ein weiter, glatter Ring, der ueber die Huelse greift und den
+    Knopf beim Druecken zusaetzlich fuehrt (statt nur ueber den duennen Gewindehals)."""
     p = P
     root = bau.root
-    H = p['knopf_dach'] + p['knopf_bohr_t']
+    d_knopf = skirt_id() + 2.0 * p['skirt_wand']
+    H = p['knopf_dach'] + p['m5_bohr_t'] + p['skirt_l']
     d_bohr = 4.134                                # Kerndurchmesser M5x0.8 (Innengewinde)
 
     sk = bau.sketch(0)
-    bau.circle(sk, x_off, 0, p['knopf_d'])
+    bau.circle(sk, x_off, 0, d_knopf)
     ex = bau.extrude(sk, H, NEW)
     ex.bodies.item(0).name = name
 
+    # M5-Gewindebohrung (fuer den Stoessel-Hals), naeher am Dach
     sk = bau.sketch(p['knopf_dach'])
     bau.circle(sk, x_off, 0, d_bohr)
-    bau.extrude(sk, p['knopf_bohr_t'], CUT, bau.body(name))
+    bau.extrude(sk, p['m5_bohr_t'], CUT, bau.body(name))
+
+    # Fuehrungsring: weite Bohrung ab dem Ende des M5-Gewindes bis zur offenen Seite
+    sk = bau.sketch(p['knopf_dach'] + p['m5_bohr_t'] - 0.1)
+    bau.circle(sk, x_off, 0, skirt_id())
+    bau.extrude(sk, p['skirt_l'] + 0.1, CUT, bau.body(name))
 
     b = bau.body(name)
     bottom = None
@@ -320,9 +364,9 @@ def knopf(bau, name, x_off):
 
     fl = cyl_faces(bau.body(name), d_bohr / 2.0, tol=0.02)
     if len(fl) != 1:
-        raise RuntimeError('Knopf: %d Bohrungsflaechen (erwartet 1)' % len(fl))
+        raise RuntimeError('Knopf: %d Bohrungsflaechen fuer das M5-Gewinde (erwartet 1)' % len(fl))
     gewinde(root, fl, True, ISO, 'M5x0.8', '6H')
-    druckspiel(bau, name, p['knopf_d'] - 2.0, p['gew_spiel_m5'])
+    druckspiel(bau, name, 8.0, p['gew_spiel_m5'])   # nur die M5-Bohrung (< 8 mm), nicht der Ring
     return H
 
 
@@ -384,8 +428,11 @@ def run(_context):
     z_top = stoessel(bau, 'Stoessel', P['x_stoessel'])
     H = knopf(bau, 'Knopf', P['x_knopf'])
     mutter(bau, 'Klemmmutter', P['x_mutter'])
-    print('Loch im Holz: %.1f mm | Huelse %.1f lang | Stoesselkoerper %.2f | Hals %.2f | Stoessel gesamt %.2f | Knopf %.1f hoch'
-          % (loch_d(), P['huelse_l'], koerper_l(), hals_l1(), z_top + P['stift_l'], H))
+    print('Loch im Holz: %.1f mm | Huelse %.1f lang (Holz %.1f) | Stoesselkoerper %.2f | Hals %.2f | Stoessel gesamt %.2f | Knopf %.1f hoch (Ring-ID %.2f)'
+          % (loch_d(), huelse_l(), P['holz'], koerper_l(), hals_l1(), z_top + P['stift_l'], H, skirt_id()))
+    print('  Ring-Eingriff max. %.2f mm (Vorgabe fuer Kalibrierung: %.2f mm)' % (ring_eingriff_max(), P['ring_eingriff']))
+    if P['ring_eingriff'] > ring_eingriff_max():
+        print('  WARNUNG: ring_eingriff > ring_eingriff_max - das M5-Gewinde saesse teilweise auf dem glatten Hals!')
     for b in root.bRepBodies:
         bb = b.boundingBox
         print('  %-14s X %7.2f..%7.2f  Y %6.2f..%6.2f  Z %6.2f..%6.2f  V=%.1f mm3' % (

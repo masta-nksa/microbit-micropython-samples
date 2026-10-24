@@ -79,18 +79,20 @@ auf GitHub anschaubar, zum Drucken z. B. in PrusaSlicer oder Cura oeffnen):
 ## Taster A/B durch den Holzdeckel (3D-Druck, Download)
 
 Damit man die micro:bit-Taster durch den Holzdeckel mit dem Finger druecken kann
-(statt mit einer Schraube). Holz 4 - 9 mm dick, rundes Loch im Holz. Zwei Versionen:
+(statt mit einer Schraube). Rundes Loch im Holz. Zwei Versionen:
 
-| | Version 1 | Version 2 (empfohlen) |
+| | Version 1 | Version 2 (empfohlen, getestet) |
 |---|---|---|
-| Prinzip | Gewindebolzen im Holzloch, Kontermutter, Kappe | Fuehrungshuelse mit Klemmmutter im Holz, Stoessel gleitet darin, Knopf |
+| Prinzip | Gewindebolzen im Holzloch, Kontermutter, Kappe | Fuehrungshuelse mit Klemmmutter im Holz, Stoessel gleitet darin, Knopf mit Fuehrungsring |
 | Holzloch | Ø 10,4 mm | Ø 12,4 mm |
+| Holzdicke | 4 - 9 mm einstellbar | fest 6 mm (Parameter `holz`, fuer anderes Holz aendern) |
 | Teile je Taster | 3 (Stoessel, Mutter, Kappe) | 4 (Huelse, Stoessel, Knopf, Klemmmutter) |
-| Fuehrung | nur die Holzdicke, wackelt etwas | ca. 12 mm lange Bohrung, fest im Holz |
+| Fuehrung | nur die Holzdicke, wackelt etwas | ca. 10 mm lange Bohrung, fest im Holz, zusaetzlich Ring am Knopf |
+| Status | nur in Fusion geprueft | **am echten Teil getestet, funktioniert** (Ring/duennere Mutter neu, nur in Fusion geprueft) |
 | Anleitung | [`cad/taster-v1/README.md`](cad/taster-v1/README.md) | [`cad/taster-v2/README.md`](cad/taster-v2/README.md) |
 
-Beide sind nur in Fusion numerisch geprueft, noch nicht gedruckt; die Anleitungen nennen
-die Annahmen (Tasterflaeche, Tasterhoehe), die vor dem Serien-Druck nachgemessen werden sollten.
+Die Anleitungen nennen die Annahmen (Tasterflaeche, Tasterhoehe), die vor dem Serien-Druck
+nachgemessen werden sollten.
 
 **Version 1:**
 [`stoessel_links.stl`](cad/taster-v1/stoessel_links.stl) /
